@@ -22,6 +22,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   3. `ml_yield_prediction.ipynb` - Machine learning models for crop yield and disease prediction
   4. `environmental_management.ipynb` - Soil health, water usage, and climate resilience analysis
   5. `education_tutorial.ipynb` - Interactive learning environment for data science in horticulture
+- **Three specialized templates** based on scientific workflow needs:
+  1. `TEMPLATE_data_analysis.ipynb` - For environmental sensors and field data
+  2. `TEMPLATE_machine_learning.ipynb` - For predictive modeling workflows
+  3. `TEMPLATE_environmental_monitoring.ipynb` - For sustainability analysis
+- **Finnish weather analysis notebook** (`finnish_weather_analysis.ipynb`):
+  - Integration with FMI (Ilmatieteen laitos) open data API
+  - Bilingual interface (Finnish/English)
+  - Growing Degree Days (GDD) calculations
+  - Frost risk analysis
+  - Growing season length calculations
+  - Horticultural recommendations based on Finnish climate
+- **Category-based organization** for notebooks:
+  - `templates/` - Starting point templates
+  - `agrology/` - Field crop and soil science
+  - `greenhouse/` - Protected cultivation
+  - `regional/` - Region-specific analysis
+  - `education/` - Learning materials
+  - `examples/` - Example implementations
+- **Category-specific README files** for each notebook category
+- **Main notebooks/README.md** explaining directory structure and navigation
 - **Interactive form-based input** in all new notebooks for easy data configuration
 - **Sample data generators** for environmental sensors, soil analysis, and plant growth
 - **Complete implementations** covering:
@@ -37,9 +57,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated roadmap reflecting completed implementations
 
 ### Changed
-- Updated README.md with detailed descriptions of all new notebooks
+- **Reorganized notebook directory structure** into logical categories
+- Updated README.md with new categorical organization
+- Updated all Colab badge links to reflect new paths
 - Updated project roadmap to mark horticultural notebooks as completed
 - Enhanced documentation for various use cases in horticultural sciences
+- Improved navigation with category-based organization
 
 ## [1.1.0] - 2025-11-04
 
