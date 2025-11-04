@@ -1,0 +1,26 @@
+# ============================================================================
+# Python dependencies for Botanical Sciences Colab Notebooks
+# ============================================================================
+# 
+# Installation:
+#   pip install -r requirements.txt
+#
+# For development:
+#   pip install -r requirements.txt -r requirements-dev.txt
+#
+# Tested with Python 3.8+
+# ============================================================================
+
+# Core dependencies
+requests>=2.31.0          # HTTP library for API calls
+pandas>=2.0.0            # Data manipulation and analysis
+ipywidgets>=8.0.0        # Interactive widgets for Jupyter/Colab
+google-generativeai>=0.3.0  # Google Gemini AI API
+
+# Optional dependencies for local development
+# (automatically available in Google Colab)
+# notebook>=7.0.0         # Jupyter Notebook
+# jupyterlab>=4.0.0       # JupyterLab
+
+# Image handling (if needed for advanced features)
+# Pillow>=10.0.0          # Python Imaging Library
