@@ -74,6 +74,121 @@ Plant card generator that aggregates data from multiple biodiversity databases a
 
 ---
 
+### 📊 `data_analysis_exploration.ipynb` *(v1.0)* — Horticultural Data Analysis & Exploration
+Interactive analysis of horticultural datasets including environmental sensors, soil tests, and plant measurements.
+
+**Features:**
+- 📥 Load and clean environmental sensor data (temperature, humidity, light)
+- 🌱 Analyze soil test results (pH, NPK nutrients, organic matter)
+- 📈 Explore plant growth measurements
+- 🎯 Detect anomalies in datasets
+- 📊 Generate summary statistics and visualizations
+- 💾 Export cleaned data and results
+
+**Use Forms:**
+- Data source selection (sample or upload)
+- Outlier detection configuration
+- Interactive parameter settings
+
+**Interface:** English  
+**Status:** Production ready  
+**Open in Colab:** [Direct link](https://colab.research.google.com/github/outobecca/botanical-colabs/blob/main/notebooks/data_analysis_exploration.ipynb)
+
+---
+
+### 📈 `data_visualization.ipynb` *(v1.0)* — Horticultural Data Visualization
+Create interactive visualizations for plant growth, disease spread, and environmental conditions.
+
+**Visualization Types:**
+- 📅 Time series plots (environmental trends)
+- 📊 Distribution plots (histograms, box plots)
+- 🔥 Correlation heatmaps
+- 🌐 3D surface plots (multivariate analysis)
+- 🔍 Scatter plot matrices
+
+**Libraries:**
+- Matplotlib for static plots
+- Seaborn for statistical graphics
+- Plotly for interactive 3D visualizations
+
+**Interface:** English  
+**Status:** Production ready  
+**Open in Colab:** [Direct link](https://colab.research.google.com/github/outobecca/botanical-colabs/blob/main/notebooks/data_visualization.ipynb)
+
+---
+
+### 🤖 `ml_yield_prediction.ipynb` *(v1.0)* — Crop Yield Prediction & Statistical Modeling
+Machine learning models for predicting crop yield, disease risk, and optimal growing conditions.
+
+**Models Included:**
+- 🌾 Yield prediction (Random Forest Regression)
+- 🦠 Disease risk assessment (Classification)
+- 📊 Feature importance analysis
+- ✅ Model evaluation and validation
+- 🔮 Interactive prediction interface
+
+**ML Techniques:**
+- Random Forest (classification & regression)
+- Cross-validation
+- Performance metrics (RMSE, R², accuracy)
+- Feature importance visualization
+
+**Use Forms:**
+- Task selection (yield/disease/growth)
+- Model configuration
+- Prediction input interface
+
+**Interface:** English  
+**Status:** Production ready  
+**Open in Colab:** [Direct link](https://colab.research.google.com/github/outobecca/botanical-colabs/blob/main/notebooks/ml_yield_prediction.ipynb)
+
+---
+
+### 🌍 `environmental_management.ipynb` *(v1.0)* — Environmental & Resource Management
+Analyze soil health, water usage, climate resilience, and resource consumption for sustainable horticulture.
+
+**Focus Areas:**
+- 🌱 Soil Health & Conservation (pH, nutrients, organic matter)
+- 💧 Water Management (usage efficiency, irrigation)
+- 🌡️ Climate Resilience (temperature stress, adaptation)
+- 📊 Resource Consumption (water, energy, inputs)
+- 📄 Sustainability reporting
+
+**Monitoring Tools:**
+- Environmental parameter tracking
+- Efficiency calculations
+- Sustainability scoring
+- Automated report generation
+
+**Interface:** English  
+**Status:** Production ready  
+**Open in Colab:** [Direct link](https://colab.research.google.com/github/outobecca/botanical-colabs/blob/main/notebooks/environmental_management.ipynb)
+
+---
+
+### 📚 `education_tutorial.ipynb` *(v1.0)* — Horticultural Data Science Education & Training
+Interactive learning environment for data science in horticulture and agriculture. No prior programming required!
+
+**Learning Modules:**
+1. 🐍 Python Basics (variables, lists, operations)
+2. 📊 Data with Pandas (loading, exploring, manipulating)
+3. 📈 Visualization (charts and plots)
+4. 📉 Statistical Analysis (correlations, summaries)
+5. 🤖 Machine Learning (simple prediction models)
+
+**Features:**
+- Self-paced interactive exercises
+- Sample datasets included
+- Step-by-step tutorials
+- Practical horticultural examples
+- Try-it-yourself challenges
+
+**Interface:** English  
+**Status:** Production ready  
+**Open in Colab:** [Direct link](https://colab.research.google.com/github/outobecca/botanical-colabs/blob/main/notebooks/education_tutorial.ipynb)
+
+---
+
 ### 📝 Legacy Notebooks
 
 **`Kasvikortti.ipynb`** — Original Finnish version (archived, use generator-plant-card_en.ipynb instead)
@@ -161,19 +276,23 @@ Contributions are welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed g
 - ✅ Colab Secrets integration
 - ✅ Scientific citations and provenance tracking
 - ✅ Multilingual support (9 languages for Wikipedia and AI content)
+- ✅ **Horticultural data analysis and exploration notebook**
+- ✅ **Data visualization notebook (Matplotlib, Seaborn, Plotly)**
+- ✅ **Machine learning crop yield prediction notebook**
+- ✅ **Environmental and resource management notebook**
+- ✅ **Education and training tutorial notebook**
 
 ### In progress 🚧
 - 🚧 Batch processing for multiple species
 - 🚧 Export to PDF/HTML
 
 ### Planned 📋
-- 📋 Crop yield prediction models
 - 📋 Pest and disease identification
-- 📋 Soil health analysis tools
 - 📋 Interactive distribution maps
 - 📋 Phylogenetic tree visualization
 - 📋 GitHub Actions for automated testing
 - 📋 Unit tests with pytest
+- 📋 Workflow automation and reproducible pipelines
 
 See [CHANGELOG.md](CHANGELOG.md) for version history.
 

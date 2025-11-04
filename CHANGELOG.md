@@ -8,11 +8,38 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Planned
-- Additional notebooks for crop yield analysis
 - Pest and disease identification tools
-- Soil health analysis notebooks
 - Interactive distribution maps
 - Batch processing capabilities
+- GitHub Actions for automated testing
+
+## [1.2.0] - 2025-11-04
+
+### Added
+- **Five new horticultural science notebooks** implementing comprehensive use cases:
+  1. `data_analysis_exploration.ipynb` - Data analysis and exploration with forms for sensor/environmental data
+  2. `data_visualization.ipynb` - Interactive visualizations (Matplotlib, Seaborn, Plotly)
+  3. `ml_yield_prediction.ipynb` - Machine learning models for crop yield and disease prediction
+  4. `environmental_management.ipynb` - Soil health, water usage, and climate resilience analysis
+  5. `education_tutorial.ipynb` - Interactive learning environment for data science in horticulture
+- **Interactive form-based input** in all new notebooks for easy data configuration
+- **Sample data generators** for environmental sensors, soil analysis, and plant growth
+- **Complete implementations** covering:
+  - Data loading, cleaning, and transformation
+  - Statistical analysis and outlier detection
+  - Time series visualization and correlation analysis
+  - Random Forest models for regression and classification
+  - Feature importance analysis
+  - Environmental sustainability metrics
+  - Step-by-step educational tutorials
+- **Export functionality** for cleaned data and analysis results
+- **Comprehensive documentation** in README.md for all new notebooks
+- Updated roadmap reflecting completed implementations
+
+### Changed
+- Updated README.md with detailed descriptions of all new notebooks
+- Updated project roadmap to mark horticultural notebooks as completed
+- Enhanced documentation for various use cases in horticultural sciences
 
 ## [1.1.0] - 2025-11-04
 
