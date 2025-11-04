@@ -212,6 +212,16 @@ footer a {
 }
 
 /* Responsive design */
+@media (max-width: 1024px) {
+    .container {
+        padding: 15px;
+    }
+    
+    header h1 {
+        font-size: 2em;
+    }
+}
+
 @media (max-width: 768px) {
     .container {
         padding: 10px;
@@ -236,6 +246,16 @@ footer a {
 .loading::after {
     content: '...';
     animation: dots 1.5s steps(4, end) infinite;
+}
+
+/* Error message */
+.error {
+    background-color: #ffebee;
+    border-left: 4px solid #c62828;
+    padding: 20px;
+    color: #c62828;
+    border-radius: 4px;
+    margin: 20px 0;
 }
 
 @keyframes dots {
