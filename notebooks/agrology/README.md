@@ -12,6 +12,10 @@ Field crop and soil science notebooks
 - **File:** `environmental_management.ipynb`
 - **Open in Colab:** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/outobecca/botanical-colabs/blob/main/notebooks/agrology/environmental_management.ipynb)
 
+### Fertilizer Calculations
+- **File:** `fertilizer_calculations.ipynb`
+- **Open in Colab:** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/outobecca/botanical-colabs/blob/main/notebooks/agrology/fertilizer_calculations.ipynb)
+
 
 ## Category Purpose
 
