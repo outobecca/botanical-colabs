@@ -9,7 +9,7 @@ This repository is focused on small, shareable notebooks that demonstrate useful
 - Notebooks directory: `notebooks/`
 
 ## Included notebooks (starter)
-- `notebooks/Kasvikortti.ipynb` — Plant card generator that aggregates data from GBIF, Trefle, Laji.fi, Wikimedia Commons, EOL, BHL and (optionally) uses Gemini for short AI summaries. Language: Finnish.
+- `notebooks/generator-plant-card_fi.ipynb` — Plant card generator that aggregates data from GBIF, Trefle, Laji.fi, Wikimedia Commons, EOL, BHL and (optionally) uses Gemini for short AI summaries. Language: Finnish.
 
 ## Features & goals
 - Demonstrate reproducible data queries against biodiversity APIs.
@@ -40,7 +40,7 @@ pip install requests pandas ipywidgets pillow google-generativeai
 
 Some data sources require API keys or tokens (Trefle, BHL, Laji.fi, Google/Gemini). Best practice:
 - Store keys in Colab using environment variables, Colab "secrets" features, or the notebook's variable section rather than hard-coding keys.
-- The `Kasvikortti.ipynb` notebook looks for keys in notebook variables (or Colab secrets). Follow the notebook cells to configure keys before running searches.
+- The `generator-plant-card_fi.ipynb` notebook looks for keys in notebook variables (or Colab secrets). Follow the notebook cells to configure keys before running searches.
 
 ## Privacy & license
 - License: MIT — see `LICENSE` (or include a LICENSE file if not yet present).
