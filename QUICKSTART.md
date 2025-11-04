@@ -2,6 +2,18 @@
 
 Get started with Botanical Sciences Colab Notebooks in 5 minutes!
 
+## 🌍 Multilingual Support
+
+The plant card generator now supports **9 languages** for Wikipedia summaries and AI-generated content!
+
+**Supported languages:**
+- �🇧 English • �🇫🇮 Finnish • 🇸🇪 Swedish • 🇩🇪 German • 🇫🇷 French
+- 🇪🇸 Spanish • 🇮🇹 Italian • 🇯🇵 Japanese • 🇨🇳 Chinese
+
+Simply select your preferred language in the notebook, and Wikipedia summaries and AI descriptions will be generated in that language!
+
+---
+
 ## 🚀 For First-Time Users
 
 ### Option 1: Try in Google Colab (Recommended)
@@ -9,7 +21,7 @@ Get started with Botanical Sciences Colab Notebooks in 5 minutes!
 **No installation needed!**
 
 1. **Open the notebook:**
-   - Click: [Plant Card Generator](https://colab.research.google.com/github/outobecca/botanical-colabs/blob/main/notebooks/generator-plant-card_fi.ipynb)
+   - � [Plant Card Generator (Multilingual)](https://colab.research.google.com/github/outobecca/botanical-colabs/blob/main/notebooks/generator-plant-card_en.ipynb)
    - Or go to [Google Colab](https://colab.research.google.com) and upload the notebook
 
 2. **Set up API keys** (optional but recommended):
@@ -17,14 +29,15 @@ Get started with Botanical Sciences Colab Notebooks in 5 minutes!
    - Add these secrets:
      - `GOOGLE_API_KEY` — [Get from Google AI Studio](https://aistudio.google.com/app/apikey)
      - `TREFLE_API_KEY` — [Get from Trefle.io](https://trefle.io)
-     - `LAJI_TOKEN` — [Request from Laji.fi](https://laji.fi/en/about/13)
+     - `LAJI_TOKEN` — [Request from Laji.fi](https://laji.fi/en/about/13) *(optional, for Finnish names)*
    - See [API_SETUP.md](API_SETUP.md) for detailed instructions
 
 3. **Run the notebook:**
    - Click ▶️ on the first cell to install packages
    - Fill in the plant name (e.g., "Quercus robur")
+   - **Select your preferred language** 🌍
    - Select data sources
-   - Click "Tallenna asetukset" (Save settings)
+   - Click "💾 Save Settings" button
    - Run remaining cells in order
 
 4. **View your plant card!** 🌿
@@ -51,32 +64,36 @@ pip install -r requirements.txt
 jupyter notebook
 ```
 
-Then open `notebooks/generator-plant-card_fi.ipynb`
+Then open `notebooks/generator-plant-card_en.ipynb`
 
 ---
 
 ## 📝 Example: Create Your First Plant Card
 
-### Step 1: Configure
+### Configure the Notebook
 
 ```python
-# In the configuration cell, enter:
-kasvin_nimi = "Quercus robur"  # English Oak
+# In the configuration cell:
+plant_name = "Quercus robur"  # English Oak
+
+# Select your language:
+🌍 Language: [dropdown] → Select "🇬🇧 English" (or any other language!)
 
 # Select data sources (checkboxes):
-✅ GBIF taksonomia
-✅ Wikimedia kasvikuvitus
-✅ Wikipedia tiivistelmä
-□ Gemini AI-kuvaus (requires API key)
+✅ GBIF taxonomy
+✅ Wikimedia illustration  
+✅ Wikipedia summary (will be fetched in your selected language!)
+✅ Gemini AI summary (will be generated in your selected language!)
 ```
 
 ### Step 2: Run
 
 Execute cells in order (Shift + Enter):
 1. ✅ Setup and installation
-2. ✅ Helper functions
+2. ✅ Helper functions  
 3. ✅ Data fetching
 4. ✅ Visualization
+5. ✅ AI summary (optional, in your selected language!)
 
 ### Step 3: Results
 
@@ -85,31 +102,36 @@ You'll get:
 - 🌱 Growth characteristics (if Trefle available)
 - 🗺️ Distribution data
 - 🎨 Botanical illustrations
-- 📖 Citations and sources
+- 📖 Wikipedia summary **in your language!**
+- 🤖 AI-generated description **in your language!**
+- 📚 Citations and sources
 
 ---
 
 ## 🎯 Common Use Cases
 
-### For Researchers
+### For Researchers (International)
 ```python
-# Study species distribution
-kasvin_nimi = "Pinus sylvestris"
-# Enable: GBIF occurrence + distribution
+# Study species distribution with summaries in your language
+plant_name = "Pinus sylvestris"
+language = "🇸🇪 Swedish"  # Or any language
+# Enable: GBIF occurrence + distribution + Wikipedia
 ```
 
-### For Educators
+### For Educators (Language Learning)
 ```python
-# Create teaching materials
-kasvin_nimi = "Malus domestica"
+# Create teaching materials in multiple languages
+plant_name = "Malus domestica"
+language = "🇫🇷 French"  # Try different languages!
 # Enable: All sources for comprehensive overview
 ```
 
-### For Gardeners
+### For Gardeners (Local Language)
 ```python
-# Plan your garden
-kasvin_nimi = "Lavandula angustifolia"
-# Enable: Trefle (pH, growth form)
+# Plan your garden with info in your language
+plant_name = "Lavandula angustifolia"
+language = "🇩🇪 German"
+# Enable: Trefle (pH, growth form) + Wikipedia
 ```
 
 ---
@@ -199,6 +221,8 @@ After your first plant card:
 
 ---
 
-**Ready to explore? [Open the notebook in Colab →](https://colab.research.google.com/github/outobecca/botanical-colabs/blob/main/notebooks/generator-plant-card_fi.ipynb)**
+**Ready to explore?**
 
-Happy botanizing! 🌿
+� [Open Multilingual Plant Card Generator in Colab →](https://colab.research.google.com/github/outobecca/botanical-colabs/blob/main/notebooks/generator-plant-card_en.ipynb)
+
+Happy botanizing in any language! 🌿

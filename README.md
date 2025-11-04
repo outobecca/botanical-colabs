@@ -14,20 +14,69 @@ This repository is focused on small, shareable notebooks that demonstrate useful
 
 ## Included notebooks
 
-### `generator-plant-card_fi.ipynb` *(v1.1)*
-Plant card generator that aggregates data from multiple biodiversity databases and creates comprehensive species factsheets.
+### 📋 `TEMPLATE_botanical_notebook.ipynb` — Notebook Template
+A standardized template for creating new botanical science notebooks. Follow this structure when contributing new analyses to the repository.
 
-**Features:**
+**Includes:**
+- 🏗️ Standard 6-step structure (Setup → Helpers → Data → Execute → Display → Citations)
+- 🔧 Pre-configured helper functions with error handling
+- 📊 Data visualization templates
+- 📚 Citation and provenance tracking
+- 🎨 Interactive widgets and UI components
+- 🔑 Colab Secrets integration
+- ✅ Type hints and comprehensive docstrings
+
+**Use this template when:**
+- Creating new botanical analysis notebooks
+- Contributing to the repository
+- Standardizing existing notebooks
+- Learning the repository structure
+
+**Interface:** English  
+**Status:** Template (starting point for new notebooks)  
+**Open in Colab:** [Direct link](https://colab.research.google.com/github/outobecca/botanical-colabs/blob/main/notebooks/TEMPLATE_botanical_notebook.ipynb)
+
+---
+
+### 🌿 `generator-plant-card_en.ipynb` *(v1.2)* — Multilingual Plant Card Generator
+Plant card generator that aggregates data from multiple biodiversity databases and creates comprehensive species factsheets. **Now with multilingual support!**
+
+**Core Features:**
 - 🌍 GBIF taxonomy and occurrence data
 - 🌱 Trefle plant characteristics
-- 🇫🇮 Laji.fi Finnish names
 - 🎨 Wikimedia Commons botanical illustrations
 - 📚 Encyclopedia of Life ecological data
-- 🤖 Optional AI-generated summaries (Google Gemini)
+- 🐦 iNaturalist community observations
+- 📖 Wikipedia summaries (in your language!)
+- 🇫🇮 Laji.fi Finnish species names (optional)
+- 📜 BHL historical illustrations
+- 🤖 AI-generated summaries (Google Gemini, in your language!)
 
-**Language:** Finnish  
+**Supported Languages:**
+- 🇬🇧 English
+- 🇫🇮 Finnish (Suomi)
+- 🇸🇪 Swedish (Svenska)
+- 🇩🇪 German (Deutsch)
+- 🇫🇷 French (Français)
+- 🇪🇸 Spanish (Español)
+- 🇮🇹 Italian (Italiano)
+- 🇯🇵 Japanese (日本語)
+- �� Chinese (中文)
+
+**What's multilingual?**
+- Wikipedia summaries fetched in your selected language
+- AI-generated descriptions written in your selected language
+- UI remains in English for consistency
+
+**Interface:** English  
 **Status:** Production ready  
-**Open in Colab:** [Direct link](https://colab.research.google.com/github/outobecca/botanical-colabs/blob/main/notebooks/generator-plant-card_fi.ipynb)
+**Open in Colab:** [Direct link](https://colab.research.google.com/github/outobecca/botanical-colabs/blob/main/notebooks/generator-plant-card_en.ipynb)
+
+---
+
+### 📝 Legacy Notebooks
+
+**`Kasvikortti.ipynb`** — Original Finnish version (archived, use generator-plant-card_en.ipynb instead)
 
 ## Features & goals
 - Demonstrate reproducible data queries against biodiversity APIs.
@@ -111,9 +160,9 @@ Contributions are welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed g
 - ✅ Error handling and validation
 - ✅ Colab Secrets integration
 - ✅ Scientific citations and provenance tracking
+- ✅ Multilingual support (9 languages for Wikipedia and AI content)
 
 ### In progress 🚧
-- 🚧 Additional language versions (English, Swedish)
 - 🚧 Batch processing for multiple species
 - 🚧 Export to PDF/HTML
 

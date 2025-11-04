@@ -31,6 +31,28 @@ Thank you for your interest in contributing! This project aims to provide reprod
 
 ## 📝 Contribution Guidelines
 
+### 📋 Using the Notebook Template
+
+**All new notebooks should start from the template:** `notebooks/TEMPLATE_botanical_notebook.ipynb`
+
+The template provides:
+- ✅ Standardized 6-step structure (Setup → Helpers → Data → Execute → Display → Citations)
+- ✅ Pre-configured helper functions with error handling
+- ✅ Interactive UI widgets and Colab Secrets integration
+- ✅ Type hints and comprehensive docstrings
+- ✅ Citation and provenance tracking templates
+- ✅ Data visualization templates
+
+**Quick start:**
+```bash
+# Copy template
+cp notebooks/TEMPLATE_botanical_notebook.ipynb notebooks/your-new-notebook.ipynb
+
+# Or in Colab: File → Save a copy
+```
+
+**See [TEMPLATE_GUIDE.md](TEMPLATE_GUIDE.md) for detailed instructions.**
+
 ### Notebook Standards
 
 All notebooks should follow these principles:
@@ -110,6 +132,24 @@ Each notebook should include:
 
 ### Notebook Structure Template
 
+**Use the provided template:** `notebooks/TEMPLATE_botanical_notebook.ipynb`
+
+The template includes a complete 6-step structure:
+
+1. **Installation & Configuration** — Package installation, imports, UI widgets, API key retrieval
+2. **Helper Functions** — Reusable utilities (safe_api_call, validation, formatting, citations)
+3. **Data Fetching Functions** — API calls organized by source
+4. **Execute Data Collection** — Main workflow orchestrating all data fetching
+5. **Data Analysis & Visualization** — Tables, plots, statistical summaries
+6. **Citations & Documentation** — Data source citations, provenance tracking
+
+**Detailed guide:** See [TEMPLATE_GUIDE.md](TEMPLATE_GUIDE.md) for:
+- Step-by-step customization instructions
+- Code style guidelines
+- Examples from existing notebooks
+- Contribution checklist
+
+**Minimal structure** for custom notebooks:
 ```markdown
 # 🌿 [Notebook Title]
 **Version:** 1.0 | **Date:** YYYY-MM-DD | **Author:** Your Name
