@@ -12,71 +12,98 @@ This repository is focused on small, shareable notebooks that demonstrate useful
 - 📋 [Changelog](CHANGELOG.md)
 - ⚖️ [License](LICENSE)
 
-## Included notebooks
+## 📚 Notebook Organization
 
-### 📋 `TEMPLATE_botanical_notebook.ipynb` — Notebook Template
-A standardized template for creating new botanical science notebooks. Follow this structure when contributing new analyses to the repository.
+Notebooks are organized into categories for easy navigation:
 
-**Includes:**
-- 🏗️ Standard 6-step structure (Setup → Helpers → Data → Execute → Display → Citations)
-- 🔧 Pre-configured helper functions with error handling
-- 📊 Data visualization templates
-- 📚 Citation and provenance tracking
-- 🎨 Interactive widgets and UI components
-- 🔑 Colab Secrets integration
-- ✅ Type hints and comprehensive docstrings
-
-**Use this template when:**
-- Creating new botanical analysis notebooks
-- Contributing to the repository
-- Standardizing existing notebooks
-- Learning the repository structure
-
-**Interface:** English  
-**Status:** Template (starting point for new notebooks)  
-**Open in Colab:** [Direct link](https://colab.research.google.com/github/outobecca/botanical-colabs/blob/main/notebooks/TEMPLATE_botanical_notebook.ipynb)
+- 📐 **[templates/](notebooks/templates/)** - Notebook templates for different scientific workflows
+- 🌾 **[agrology/](notebooks/agrology/)** - Field crop and soil science notebooks  
+- 🏗️ **[greenhouse/](notebooks/greenhouse/)** - Protected cultivation and greenhouse management
+- 🗺️ **[regional/](notebooks/regional/)** - Region-specific horticultural analysis
+- 🎓 **[education/](notebooks/education/)** - Learning and training materials
+- 📋 **[examples/](notebooks/examples/)** - Example implementations and demonstrations
 
 ---
 
-### 🌿 `generator-plant-card_en.ipynb` *(v1.2)* — Multilingual Plant Card Generator
-Plant card generator that aggregates data from multiple biodiversity databases and creates comprehensive species factsheets. **Now with multilingual support!**
+## 📐 Templates (notebooks/templates/)
 
-**Core Features:**
-- 🌍 GBIF taxonomy and occurrence data
-- 🌱 Trefle plant characteristics
-- 🎨 Wikimedia Commons botanical illustrations
-- 📚 Encyclopedia of Life ecological data
-- 🐦 iNaturalist community observations
-- 📖 Wikipedia summaries (in your language!)
-- 🇫🇮 Laji.fi Finnish species names (optional)
-- 📜 BHL historical illustrations
-- 🤖 AI-generated summaries (Google Gemini, in your language!)
+Starting points for creating new notebooks in specific domains.
 
-**Supported Languages:**
-- 🇬🇧 English
-- 🇫🇮 Finnish (Suomi)
-- 🇸🇪 Swedish (Svenska)
-- 🇩🇪 German (Deutsch)
-- 🇫🇷 French (Français)
-- 🇪🇸 Spanish (Español)
-- 🇮🇹 Italian (Italiano)
-- 🇯🇵 Japanese (日本語)
-- �� Chinese (中文)
+### `TEMPLATE_botanical_notebook.ipynb` — General Template
+General-purpose template for botanical science notebooks.
+[📖 Details](notebooks/templates/README.md) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/outobecca/botanical-colabs/blob/main/notebooks/templates/TEMPLATE_botanical_notebook.ipynb)
 
-**What's multilingual?**
-- Wikipedia summaries fetched in your selected language
-- AI-generated descriptions written in your selected language
-- UI remains in English for consistency
+### `TEMPLATE_data_analysis.ipynb` — Data Analysis Template  
+Pre-configured for environmental sensors, soil tests, and plant measurements.
+[📖 Details](notebooks/templates/README.md) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/outobecca/botanical-colabs/blob/main/notebooks/templates/TEMPLATE_data_analysis.ipynb)
 
-**Interface:** English  
-**Status:** Production ready  
-**Open in Colab:** [Direct link](https://colab.research.google.com/github/outobecca/botanical-colabs/blob/main/notebooks/generator-plant-card_en.ipynb)
+### `TEMPLATE_machine_learning.ipynb` — ML Template
+Specialized for crop yield prediction and disease risk models.
+[📖 Details](notebooks/templates/README.md) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/outobecca/botanical-colabs/blob/main/notebooks/templates/TEMPLATE_machine_learning.ipynb)
+
+### `TEMPLATE_environmental_monitoring.ipynb` — Environmental Template
+For soil health, water usage, and sustainability analysis.
+[📖 Details](notebooks/templates/README.md) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/outobecca/botanical-colabs/blob/main/notebooks/templates/TEMPLATE_environmental_monitoring.ipynb)
 
 ---
 
-### 📝 Legacy Notebooks
+## 🌾 Agrology (notebooks/agrology/)
 
-**`Kasvikortti.ipynb`** — Original Finnish version (archived, use generator-plant-card_en.ipynb instead)
+Field crop and soil science analysis notebooks.
+
+### `data_analysis_exploration.ipynb` — Data Analysis & Exploration
+Interactive analysis of environmental sensors, soil tests, and plant measurements. Includes outlier detection, statistical summaries, and data cleaning.
+[📖 Details](notebooks/agrology/README.md) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/outobecca/botanical-colabs/blob/main/notebooks/agrology/data_analysis_exploration.ipynb)
+
+### `environmental_management.ipynb` — Environmental & Resource Management
+Analyze soil health, water usage, climate resilience, and resource consumption for sustainable agriculture.
+[📖 Details](notebooks/agrology/README.md) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/outobecca/botanical-colabs/blob/main/notebooks/agrology/environmental_management.ipynb)
+
+---
+
+## 🏗️ Greenhouse (notebooks/greenhouse/)
+
+Protected cultivation and greenhouse management notebooks.
+
+### `ml_yield_prediction.ipynb` — Crop Yield Prediction & ML
+Machine learning models for predicting yield, disease risk, and optimal growing conditions. Includes Random Forest models and feature importance analysis.
+[📖 Details](notebooks/greenhouse/README.md) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/outobecca/botanical-colabs/blob/main/notebooks/greenhouse/ml_yield_prediction.ipynb)
+
+### `data_visualization.ipynb` — Data Visualization
+Create interactive visualizations for plant growth, environmental conditions, and greenhouse metrics using Matplotlib, Seaborn, and Plotly.
+[📖 Details](notebooks/greenhouse/README.md) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/outobecca/botanical-colabs/blob/main/notebooks/greenhouse/data_visualization.ipynb)
+
+---
+
+## 🗺️ Regional (notebooks/regional/)
+
+Region-specific horticultural analysis with local data sources.
+
+### `finnish_weather_analysis.ipynb` 🇫🇮 — Finnish Weather Analysis
+Analyze Finnish weather data for horticulture using FMI (Ilmatieteen laitos) open data. Includes growing season analysis, frost risk, and GDD calculations. **Bilingual: Finnish/English**
+[📖 Details](notebooks/regional/README.md) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/outobecca/botanical-colabs/blob/main/notebooks/regional/finnish_weather_analysis.ipynb)
+
+---
+
+## 🎓 Education (notebooks/education/)
+
+Learning and training materials for horticultural data science.
+
+### `education_tutorial.ipynb` — Data Science Tutorial
+Interactive learning environment for beginners. Covers Python basics, Pandas, visualization, statistics, and machine learning with horticultural examples. **No prior programming required!**
+[📖 Details](notebooks/education/README.md) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/outobecca/botanical-colabs/blob/main/notebooks/education/education_tutorial.ipynb)
+
+---
+
+## 📋 Examples (notebooks/examples/)
+
+Example implementations and demonstrations.
+
+### `generator-plant-card.ipynb` — Plant Card Generator
+Multi-source plant information aggregator. Fetches data from GBIF, Trefle, Wikipedia, and more. **Supports 9 languages!**
+[📖 Details](notebooks/examples/README.md) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/outobecca/botanical-colabs/blob/main/notebooks/examples/generator-plant-card.ipynb)
+
+---
 
 ## Features & goals
 - Demonstrate reproducible data queries against biodiversity APIs.
@@ -161,19 +188,23 @@ Contributions are welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed g
 - ✅ Colab Secrets integration
 - ✅ Scientific citations and provenance tracking
 - ✅ Multilingual support (9 languages for Wikipedia and AI content)
+- ✅ **Horticultural data analysis and exploration notebook**
+- ✅ **Data visualization notebook (Matplotlib, Seaborn, Plotly)**
+- ✅ **Machine learning crop yield prediction notebook**
+- ✅ **Environmental and resource management notebook**
+- ✅ **Education and training tutorial notebook**
 
 ### In progress 🚧
 - 🚧 Batch processing for multiple species
 - 🚧 Export to PDF/HTML
 
 ### Planned 📋
-- 📋 Crop yield prediction models
 - 📋 Pest and disease identification
-- 📋 Soil health analysis tools
 - 📋 Interactive distribution maps
 - 📋 Phylogenetic tree visualization
 - 📋 GitHub Actions for automated testing
 - 📋 Unit tests with pytest
+- 📋 Workflow automation and reproducible pipelines
 
 See [CHANGELOG.md](CHANGELOG.md) for version history.
 
