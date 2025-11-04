@@ -6,11 +6,13 @@ This repository is focused on small, shareable notebooks that demonstrate useful
 
 ## Quick links
 - 🌐 Repository: https://github.com/outobecca/botanical-colabs
+- 🌍 GitHub Pages: https://outobecca.github.io/botanical-colabs/
 - 📓 Notebooks: `notebooks/`
 - 🔑 [API Setup Guide](API_SETUP.md)
 - 🤝 [Contributing Guidelines](CONTRIBUTING.md)
 - 📋 [Changelog](CHANGELOG.md)
 - ⚖️ [License](LICENSE)
+- 📄 [GitHub Pages Setup](GITHUB_PAGES.md)
 
 ## Included notebooks
 
