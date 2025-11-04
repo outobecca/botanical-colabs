@@ -12,6 +12,10 @@ Protected cultivation and greenhouse management
 - **File:** `data_visualization.ipynb`
 - **Open in Colab:** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/outobecca/botanical-colabs/blob/main/notebooks/greenhouse/data_visualization.ipynb)
 
+### Lighting Setup Analyzer
+- **File:** `lighting_setup_analyzer.ipynb`
+- **Open in Colab:** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/outobecca/botanical-colabs/blob/main/notebooks/greenhouse/lighting_setup_analyzer.ipynb)
+
 
 ## Category Purpose
 

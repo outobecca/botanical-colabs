@@ -75,6 +75,10 @@ Machine learning models for predicting yield, disease risk, and optimal growing 
 Create interactive visualizations for plant growth, environmental conditions, and greenhouse metrics using Matplotlib, Seaborn, and Plotly.
 [📖 Details](notebooks/greenhouse/README.md) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/outobecca/botanical-colabs/blob/main/notebooks/greenhouse/data_visualization.ipynb)
 
+### `lighting_setup_analyzer.ipynb` — Lighting Setup Analyzer
+Analyze greenhouse lighting setups based on CSV measured values. Evaluates light intensity, uniformity, Daily Light Integral (DLI), and energy efficiency with actionable recommendations.
+[📖 Details](notebooks/greenhouse/README.md) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/outobecca/botanical-colabs/blob/main/notebooks/greenhouse/lighting_setup_analyzer.ipynb)
+
 ---
 
 ## 🗺️ Regional (notebooks/regional/)
