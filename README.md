@@ -61,6 +61,10 @@ Interactive analysis of environmental sensors, soil tests, and plant measurement
 Analyze soil health, water usage, climate resilience, and resource consumption for sustainable agriculture.
 [📖 Details](notebooks/agrology/README.md) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/outobecca/botanical-colabs/blob/main/notebooks/agrology/environmental_management.ipynb)
 
+### `fertilizer_calculations.ipynb` — Fertilizer Calculations
+Calculate precise fertilizer requirements based on crop-specific nutrient needs, soil test results, and field characteristics. Supports multiple crops with NPK optimization.
+[📖 Details](notebooks/agrology/README.md) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/outobecca/botanical-colabs/blob/main/notebooks/agrology/fertilizer_calculations.ipynb)
+
 ---
 
 ## 🏗️ Greenhouse (notebooks/greenhouse/)
