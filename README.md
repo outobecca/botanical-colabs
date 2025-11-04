@@ -71,7 +71,7 @@ In-depth analysis of soil health indicators, water usage patterns, climate resil
 [📖 Details](notebooks/agrology/README.md) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/outobecca/botanical-colabs/blob/main/notebooks/agrology/environmental_management.ipynb)
 
 ### `fertilizer_calculations.ipynb` — Fertilizer Calculations
-Calculate precise fertilizer requirements based on crop-specific nutrient needs, soil test results, and field characteristics. Supports multiple crops with NPK optimization.
+Calculate precise fertilizer requirements based on crop-specific nutrient needs, soil test results, and field characteristics. Supports multiple crops (vegetables, grains, legumes, root crops) with NPK optimization for nitrogen, phosphorus, and potassium. Features nutrient budget calculations, fertilizer product recommendations, application rate determination, and cost estimates. Accounts for existing soil nutrients and fertilizer efficiency to minimize waste and environmental impact. Ideal for precision agriculture, nutrient management planning, and sustainable farming practices.
 [📖 Details](notebooks/agrology/README.md) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/outobecca/botanical-colabs/blob/main/notebooks/agrology/fertilizer_calculations.ipynb)
 
 ---
@@ -89,7 +89,7 @@ Professional-quality interactive visualizations for plant growth monitoring, env
 [📖 Details](notebooks/greenhouse/README.md) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/outobecca/botanical-colabs/blob/main/notebooks/greenhouse/data_visualization.ipynb)
 
 ### `lighting_setup_analyzer.ipynb` — Lighting Setup Analyzer
-Analyze greenhouse lighting setups based on CSV measured values. Evaluates light intensity, uniformity, Daily Light Integral (DLI), and energy efficiency with actionable recommendations.
+Comprehensive analysis of greenhouse lighting setups using CSV measurement data. Evaluates PPFD (Photosynthetic Photon Flux Density), light intensity distribution across zones, uniformity ratios to identify hot/cold spots, Daily Light Integral (DLI) for photoperiod control, and energy efficiency metrics. Provides actionable recommendations for optimizing plant growth conditions while minimizing energy costs. Essential for greenhouse operators managing supplemental lighting, ensuring uniform crop development, and meeting the 200-400 μmol/m²/s PPFD requirements for optimal photosynthesis.
 [📖 Details](notebooks/greenhouse/README.md) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/outobecca/botanical-colabs/blob/main/notebooks/greenhouse/lighting_setup_analyzer.ipynb)
 
 ---
@@ -247,6 +247,9 @@ Contributions are welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed g
 - ✅ **Machine learning crop yield prediction notebook**
 - ✅ **Environmental and resource management notebook**
 - ✅ **Education and training tutorial notebook**
+- ✅ **Fertilizer calculations with crop-specific nutrient needs**
+- ✅ **Greenhouse lighting setup analyzer with PPFD and DLI metrics**
+- ✅ **Finnish weather analysis with FMI integration**
 
 ### In progress 🚧
 - 🚧 Batch processing for multiple species

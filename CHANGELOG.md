@@ -22,6 +22,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   3. `ml_yield_prediction.ipynb` - Machine learning models for crop yield and disease prediction
   4. `environmental_management.ipynb` - Soil health, water usage, and climate resilience analysis
   5. `education_tutorial.ipynb` - Interactive learning environment for data science in horticulture
+- **Two specialized agrology and greenhouse notebooks**:
+  1. `fertilizer_calculations.ipynb` - Precise fertilizer requirements based on crop-specific nutrient needs and soil tests
+  2. `lighting_setup_analyzer.ipynb` - Greenhouse lighting analysis with PPFD, DLI, and energy efficiency metrics
 - **Three specialized templates** based on scientific workflow needs:
   1. `TEMPLATE_data_analysis.ipynb` - For environmental sensors and field data
   2. `TEMPLATE_machine_learning.ipynb` - For predictive modeling workflows
