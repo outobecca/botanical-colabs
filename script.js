@@ -52,7 +52,7 @@ function enhanceNotebookLinks() {
         
         // Add Colab badge icon if it's a "Direct link" or "Open in Colab"
         if (link.textContent.includes('Direct link') || link.textContent.includes('Open in Colab')) {
-            link.innerHTML = '🚀 ' + link.textContent;
+            link.textContent = '🚀 ' + link.textContent;
         }
     });
 }
