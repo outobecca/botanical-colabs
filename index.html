@@ -8,18 +8,139 @@
     <script src="https://cdn.jsdelivr.net/npm/marked@9.1.2/marked.min.js"></script>
 </head>
 <body>
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">🌿 Open Science</div>
+            <h1 class="hero-title">Botanical Sciences<br><span class="hero-highlight">Research Notebooks</span></h1>
+            <p class="hero-subtitle">Reproducible data analysis, machine learning, and visualization tools for plant science—powered by open data and AI-assisted workflows</p>
+            <div class="hero-buttons">
+                <a href="#notebooks" class="btn btn-primary">Explore Notebooks</a>
+                <a href="#blog" class="btn btn-secondary">Read Blog</a>
+                <a href="https://github.com/outobecca/botanical-colabs" class="btn btn-outline">GitHub</a>
+            </div>
+        </div>
+        <div class="hero-stats">
+            <div class="stat">
+                <div class="stat-number">6+</div>
+                <div class="stat-label">Categories</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">15+</div>
+                <div class="stat-label">Notebooks</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">9</div>
+                <div class="stat-label">Languages</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-brand">🌿 Botanical Colabs</a>
+            <div class="nav-links">
+                <a href="#notebooks">Notebooks</a>
+                <a href="#blog">Blog</a>
+                <a href="#about">About</a>
+                <a href="https://github.com/outobecca/botanical-colabs">GitHub</a>
+            </div>
+        </div>
+    </nav>
+
     <div class="container">
-        <header>
-            <h1>🌿 Botanical Sciences Colab Notebooks</h1>
-            <p class="subtitle">A comprehensive collection of reproducible Jupyter/Colab notebooks for botanical, horticultural, and agricultural research. Explore data analysis, machine learning, environmental monitoring, and specialized tools for plant science—all powered by open data and AI-assisted workflows.</p>
-        </header>
-        
-        <main id="content">
-            <!-- Content will be loaded here -->
-        </main>
+        <!-- Featured Categories Section -->
+        <section id="notebooks" class="featured-section">
+            <h2 class="section-title">Explore by Category</h2>
+            <div class="categories-grid">
+                <a href="notebooks/templates/" class="category-card">
+                    <div class="category-icon">📐</div>
+                    <h3>Templates</h3>
+                    <p>Professional notebook templates for different workflows</p>
+                    <span class="category-link">Browse Templates →</span>
+                </a>
+                <a href="notebooks/agrology/" class="category-card">
+                    <div class="category-icon">🌾</div>
+                    <h3>Agrology</h3>
+                    <p>Field crop and soil science analysis</p>
+                    <span class="category-link">View Notebooks →</span>
+                </a>
+                <a href="notebooks/greenhouse/" class="category-card">
+                    <div class="category-icon">🏗️</div>
+                    <h3>Greenhouse</h3>
+                    <p>Protected cultivation management</p>
+                    <span class="category-link">View Notebooks →</span>
+                </a>
+                <a href="notebooks/regional/" class="category-card">
+                    <div class="category-icon">🗺️</div>
+                    <h3>Regional</h3>
+                    <p>Region-specific analysis tools</p>
+                    <span class="category-link">View Notebooks →</span>
+                </a>
+                <a href="notebooks/education/" class="category-card">
+                    <div class="category-icon">🎓</div>
+                    <h3>Education</h3>
+                    <p>Learning materials for beginners</p>
+                    <span class="category-link">View Notebooks →</span>
+                </a>
+                <a href="notebooks/examples/" class="category-card">
+                    <div class="category-icon">📋</div>
+                    <h3>Examples</h3>
+                    <p>Real-world implementations</p>
+                    <span class="category-link">View Notebooks →</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section id="blog" class="blog-section">
+            <h2 class="section-title">Latest from the Blog</h2>
+            <p class="section-description">Discover how researchers use these notebooks in botanical science</p>
+            <div class="blog-grid" id="blog-posts">
+                <div class="blog-card">
+                    <div class="blog-date">Coming Soon</div>
+                    <h3>Welcome to Botanical Colabs Blog</h3>
+                    <p>We're launching a botanical science blog to showcase how these notebooks are used in real research. Stay tuned for case studies, tutorials, and research highlights!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content Section -->
+        <section id="about" class="content-section">
+            <main id="content">
+                <div class="loading">Loading content</div>
+            </main>
+        </section>
         
         <footer>
-            <p>Maintained by Pekka Sihvonen | <a href="https://github.com/outobecca/botanical-colabs">View on GitHub</a> | MIT License</p>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Botanical Colabs</h4>
+                    <p>Open science tools for plant research</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="notebooks/">All Notebooks</a></li>
+                        <li><a href="https://github.com/outobecca/botanical-colabs">GitHub</a></li>
+                        <li><a href="API_SETUP.md">API Setup</a></li>
+                        <li><a href="CONTRIBUTING.md">Contributing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="TEMPLATE_GUIDE.md">Template Guide</a></li>
+                        <li><a href="MYST_MARP_GUIDE.md">MyST & Marp</a></li>
+                        <li><a href="QUICKSTART.md">Quick Start</a></li>
+                        <li><a href="CHANGELOG.md">Changelog</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Maintained by Pekka Sihvonen | MIT License | © 2025</p>
+            </div>
         </footer>
     </div>
     

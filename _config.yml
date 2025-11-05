@@ -1,8 +1,66 @@
 # Jekyll GitHub Pages Configuration
-theme: jekyll-theme-minimal
+# ============================================================================
+# Basic Configuration
+# ============================================================================
 title: Botanical Sciences Colab Notebooks
 description: A collection of reproducible Jupyter/Colab notebooks for practical botanical research
+url: https://outobecca.github.io
+baseurl: /botanical-colabs
+author: Pekka Sihvonen
+
+# GitHub Pages theme
+theme: jekyll-theme-minimal
 show_downloads: true
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Exclude files from processing
+exclude:
+  - .git
+  - .github
+  - node_modules
+  - vendor
+  - .gitignore
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - requirements.txt
+  - pyproject.toml
+  - "*.ipynb_checkpoints"
+  - "*.backup"
+
+# Include files that start with underscore
+include:
+  - _posts
+
+# Blog configuration
+permalink: /blog/:year/:month/:day/:title/
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /blog/:year/:month/:day/:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
 
 # ============================================================================
 # MyST / Jupyter Book Configuration

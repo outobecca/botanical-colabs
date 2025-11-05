@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regional Notebooks - Botanical Sciences</title>
+    <link rel="stylesheet" href="../../style.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked@9.1.2/marked.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🗺️ Regional Notebooks</h1>
+            <p class="subtitle">Region-specific horticultural analysis</p>
+            <nav style="text-align: center; margin-top: 20px;">
+                <a href="../../index.html" style="color: #c9d1d9; margin: 0 10px;">← Back to Home</a>
+                <a href="../index.html" style="color: #c9d1d9; margin: 0 10px;">📚 All Notebooks</a>
+            </nav>
+        </header>
+        
+        <main id="content">
+            <div class="loading">Loading content</div>
+        </main>
+        
+        <footer>
+            <p>Maintained by Pekka Sihvonen | <a href="https://github.com/outobecca/botanical-colabs">View on GitHub</a> | MIT License</p>
+        </footer>
+    </div>
+    
+    <script>
+        // Load and render README content
+        async function loadReadme() {
+            try {
+                const response = await fetch('README.md');
+                const markdown = await response.text();
+                const html = marked.parse(markdown);
+                document.getElementById('content').innerHTML = html;
+            } catch (error) {
+                console.error('Error loading README:', error);
+                document.getElementById('content').innerHTML = '<p class="error">Failed to load content. Please try again later.</p>';
+            }
+        }
+        
+        document.addEventListener('DOMContentLoaded', loadReadme);
+    </script>
+</body>
+</html>

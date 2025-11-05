@@ -22,6 +22,32 @@ async function loadReadme() {
     }
 }
 
+// Load blog posts for the home page
+async function loadBlogPosts() {
+    const blogContainer = document.getElementById('blog-posts');
+    if (!blogContainer) return;
+    
+    // Static blog posts for now
+    // In a full Jekyll setup, this would be generated server-side
+    const posts = [
+        {
+            title: 'Welcome to Botanical Colabs Blog',
+            date: 'November 5, 2025',
+            excerpt: 'We\'re launching a botanical science blog to showcase how these notebooks are used in real research. Stay tuned for case studies, tutorials, and research highlights!',
+            link: 'blog/'
+        }
+    ];
+    
+    blogContainer.innerHTML = posts.map(post => `
+        <div class="blog-card">
+            <div class="blog-date">${post.date}</div>
+            <h3><a href="${post.link}" style="color: inherit; text-decoration: none;">${post.title}</a></h3>
+            <p>${post.excerpt}</p>
+            <a href="${post.link}" class="category-link">Read More →</a>
+        </div>
+    `).join('');
+}
+
 // Enhance notebook links to include Colab badges and links
 function enhanceNotebookLinks() {
     const content = document.getElementById('content');
@@ -77,8 +103,41 @@ async function loadNotebooks() {
     }
 }
 
+// Smooth scrolling for anchor links
+function setupSmoothScrolling() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+}
+
+// Sticky navbar on scroll
+function setupStickyNavbar() {
+    const navbar = document.getElementById('navbar');
+    if (!navbar) return;
+    
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 100) {
+            navbar.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.5)';
+        } else {
+            navbar.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.3)';
+        }
+    });
+}
+
 // Initialize the page
 document.addEventListener('DOMContentLoaded', () => {
     loadReadme();
     loadNotebooks();
+    loadBlogPosts();
+    setupSmoothScrolling();
+    setupStickyNavbar();
 });
