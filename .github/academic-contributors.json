@@ -1,0 +1,18 @@
+[
+  {
+    "github_username": "outobecca",
+    "full_name": "Rebecca [Last Name]",
+    "institution": "[Your Institution]",
+    "department": "Botanical Sciences",
+    "role": "Researcher",
+    "email": "rebecca@institution.edu",
+    "research_interests": [
+      "Plant taxonomy",
+      "Botanical informatics",
+      "Biodiversity conservation"
+    ],
+    "verified_date": "2025-11-05",
+    "verified_by": "outobecca",
+    "notes": "Repository owner and primary maintainer"
+  }
+]

@@ -2,7 +2,34 @@
 
 Thank you for your interest in contributing! This project aims to provide reproducible, scientifically rigorous notebooks for botanical research.
 
-## 🌿 How to Contribute
+## � Academic Verification Required
+
+**This repository requires academic verification for all contributors** to ensure scientific rigor and credibility.
+
+### Who Can Contribute?
+
+We welcome contributions from:
+- ✅ Faculty at accredited universities
+- ✅ Researchers at recognized institutions
+- ✅ Postdoctoral researchers
+- ✅ Graduate students (Masters/PhD)
+- ✅ Scientists at botanical gardens, museums, or conservation organizations
+
+### Verification Process
+
+1. **Submit your PR** - Create your pull request normally
+2. **Get notified** - Automated workflow will post verification instructions
+3. **Provide credentials** - Email or comment with your institutional affiliation
+4. **Wait 1-3 days** - We verify your academic status
+5. **Contribute freely** - Once verified, all future PRs are pre-approved
+
+**Full details:** [Academic Verification Guide](.github/ACADEMIC_VERIFICATION.md)
+
+**Why?** Our notebooks are used for research, education, and conservation. We need to ensure all contributions meet academic standards.
+
+---
+
+## �🌿 How to Contribute
 
 ### Types of Contributions
 

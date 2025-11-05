@@ -1,0 +1,80 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Verified Academic Contributors",
+  "description": "List of verified academic contributors to the Botanical Research repository",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["github_username", "full_name", "institution", "role", "verified_date", "verified_by"],
+    "properties": {
+      "github_username": {
+        "type": "string",
+        "description": "GitHub username"
+      },
+      "full_name": {
+        "type": "string",
+        "description": "Full legal name"
+      },
+      "institution": {
+        "type": "string",
+        "description": "University or research institution"
+      },
+      "department": {
+        "type": "string",
+        "description": "Department or division"
+      },
+      "role": {
+        "type": "string",
+        "enum": [
+          "Professor",
+          "Associate Professor",
+          "Assistant Professor",
+          "Postdoctoral Researcher",
+          "PhD Student",
+          "Masters Student",
+          "Research Scientist",
+          "Principal Investigator",
+          "Research Associate",
+          "Lecturer",
+          "Other Academic"
+        ],
+        "description": "Academic role or position"
+      },
+      "orcid": {
+        "type": "string",
+        "pattern": "^[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{3}[0-9X]$",
+        "description": "ORCID identifier (format: 0000-0000-0000-0000)"
+      },
+      "email": {
+        "type": "string",
+        "format": "email",
+        "description": "Institutional email address"
+      },
+      "profile_url": {
+        "type": "string",
+        "format": "uri",
+        "description": "Link to institutional profile or Google Scholar"
+      },
+      "research_interests": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "Research areas and interests"
+      },
+      "verified_date": {
+        "type": "string",
+        "format": "date",
+        "description": "Date when contributor was verified (YYYY-MM-DD)"
+      },
+      "verified_by": {
+        "type": "string",
+        "description": "GitHub username of maintainer who verified"
+      },
+      "notes": {
+        "type": "string",
+        "description": "Additional notes or comments"
+      }
+    }
+  }
+}
