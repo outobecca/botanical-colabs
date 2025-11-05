@@ -257,6 +257,40 @@ Then create a Pull Request on GitHub with:
 - **Testing notes** (what you tested)
 - **Related issues** (if applicable)
 
+### 7. Automatic Documentation Generation 🤖
+
+When you create or update notebooks in a PR, our **Auto-Documentation Workflow** automatically:
+
+- ✅ **Generates Wiki Pages** — Comprehensive documentation with setup instructions, features, and usage examples
+- ✅ **Creates HTML Previews** — Rendered outputs without code cells for easy viewing
+- ✅ **Generates Thumbnails** — Preview images for gallery display
+- ✅ **Posts PR Comment** — Summary with links to all generated documentation
+
+**What you need to do:** Nothing! Just add good metadata to your notebook (see below).
+
+**Improve auto-generated docs** by adding metadata in your notebook's first markdown cell:
+```markdown
+# My Analysis Title
+
+Clear description of what this notebook does and why it's useful.
+
+**Author:** Your Name
+**Tags:** data-analysis, plants, visualization
+```
+
+The workflow will:
+1. Detect changed notebooks in your PR
+2. Extract metadata (title, description, tags, cell counts)
+3. Generate wiki page at `wiki/your-notebook.md`
+4. Create HTML preview at `previews/html/your_notebook.html`
+5. Generate thumbnail at `thumbnails/your_notebook.png`
+6. Commit all files to your PR branch
+7. Post a comment with links to all generated docs
+
+**Learn more:**
+- 📚 [Auto-Documentation Guide](.github/workflows/AUTO_DOCUMENTATION.md)
+- ⚡ [Quick Reference](.github/workflows/QUICK_REFERENCE.md)
+
 ## 📋 Pull Request Checklist
 
 Before submitting a PR, ensure:
