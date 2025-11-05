@@ -1,0 +1,65 @@
+name: Lint and format notebooks
+
+on:
+  push:
+    paths:
+      - 'notebooks/**'
+  pull_request:
+    paths:
+      - 'notebooks/**'
+
+permissions:
+  contents: write
+
+jobs:
+  lint:
+    name: nbQA lint & format
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Cache pip
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/pyproject.toml','**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
+      - name: Install nbQA + linters
+        run: |
+          python -m pip install --upgrade pip
+          pip install nbqa ruff black
+
+      - name: Run ruff (auto-fix) via nbQA
+        run: |
+          echo "Running nbqa ruff --fix on notebooks/"
+          nbqa ruff --fix notebooks || true
+
+      - name: Run black (auto-format) via nbQA
+        run: |
+          echo "Running nbqa black on notebooks/"
+          nbqa black notebooks || true
+
+      - name: Commit & push formatting changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: format notebooks with nbqa (ruff + black)"
+            git push
+          else
+            echo "No changes to commit"
+          fi
