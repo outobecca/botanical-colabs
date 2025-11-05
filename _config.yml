@@ -9,9 +9,12 @@ baseurl: /botanical-colabs
 author: Pekka Sihvonen
 repository: outobecca/botanical-colabs
 
-# GitHub Pages theme
-theme: jekyll-theme-minimal
-show_downloads: true
+# GitHub Pages theme - DISABLED to use custom CSS
+# theme: jekyll-theme-minimal
+# show_downloads: true
+
+# Disable default theme to use custom index.html and style.css
+theme: null
 
 # Build settings
 markdown: kramdown
