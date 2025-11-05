@@ -5,7 +5,15 @@ const GITHUB_BRANCH = 'main';
 // Load and render README content
 async function loadReadme() {
     try {
-        const response = await fetch('README.md');
+        // Try to fetch README.md from current directory first, then from root
+        let response;
+        try {
+            response = await fetch('./README.md');
+            if (!response.ok) throw new Error('Not found in current dir');
+        } catch {
+            response = await fetch('/README.md');
+        }
+        
         const markdown = await response.text();
         
         // Convert markdown to HTML using marked.js
