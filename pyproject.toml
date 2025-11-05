@@ -1,0 +1,13 @@
+[tool.black]
+line-length = 88
+target-version = ["py310"]
+
+[tool.ruff]
+line-length = 88
+# Adjust select/ignore to your preferences. This is a sensible default selection.
+select = ["E", "F", "W", "I", "S", "C", "B"]
+ignore = []
+
+[tool.nbqa]
+# nbqa-specific settings can go here if desired
+# e.g. to silence certain nbqa warnings
