@@ -12,6 +12,19 @@ This repository provides a comprehensive suite of tools and templates for plant 
 - **Regional analysis tools** leveraging local open data sources
 - **Multi-language support** for global accessibility
 - **Zero local setup** required - runs entirely in Google Colab
+- ⭐ **NEW: MyST & Marp** — Scientific documentation and presentation features
+
+## ✨ New in Version 2.0
+
+🚀 **Enhanced with Professional Features:**
+- **MyST Markdown** — Advanced scientific documentation with cross-references, citations, and admonitions
+- **Marp Presentations** — Convert notebooks to beautiful slide decks (HTML, PDF, PowerPoint)
+- **Auto-Reload Magic** — Efficient development with instant code updates
+- **Code Modularization** — %%writefile for organized, reusable code
+- **Jupyter Book Support** — Build publication-quality documentation
+- **VS Code Optimized** — Full IDE features with notebook integration
+
+📖 See [MyST & Marp Integration Guide](MYST_MARP_GUIDE.md) for details
 
 ## Quick links
 - 🌐 Repository: https://github.com/outobecca/botanical-colabs
@@ -22,6 +35,7 @@ This repository provides a comprehensive suite of tools and templates for plant 
 - 📋 [Changelog](CHANGELOG.md)
 - ⚖️ [License](LICENSE)
 - 📄 [GitHub Pages Setup](GITHUB_PAGES.md)
+- ⭐ **[MyST & Marp Guide](MYST_MARP_GUIDE.md)** ← NEW!
 
 ## 📚 Notebook Organization
 
@@ -38,7 +52,15 @@ Notebooks are organized into six specialized categories, each designed for speci
 
 ## 📐 Templates (notebooks/templates/)
 
-Professionally designed starting points for creating new botanical research notebooks. Each template includes pre-configured sections, best practices for documentation, error handling, and data source citations. Perfect for researchers who want to follow scientific standards while focusing on their specific research questions.
+Professionally designed starting points for creating new botanical research notebooks. Each template includes pre-configured sections, best practices for documentation, error handling, and data source citations. **Now enhanced with MyST markdown, auto-reload, and Marp presentation features!**
+
+### ⭐ `TEMPLATE_myst_scientific.ipynb` — MyST Scientific Template NEW!
+Advanced scientific notebook template with MyST markdown features for publication-quality documentation. Includes cross-references, citations, admonitions, auto-reload setup, %%writefile for code modularization, and Jupyter Book compatibility. Perfect for research papers, scientific reports, and technical documentation.
+[📖 Details](notebooks/templates/README.md) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/outobecca/botanical-colabs/blob/main/notebooks/templates/TEMPLATE_myst_scientific.ipynb)
+
+### ⭐ `TEMPLATE_marp_presentation.ipynb` — Marp Presentation Template NEW!
+Convert your botanical research into beautiful presentations! Includes Marp markdown for slides, live demo code cells, professional visualizations, and export options (HTML, PDF, PowerPoint). Ideal for conferences, teaching, and stakeholder presentations.
+[📖 Details](notebooks/templates/README.md) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/outobecca/botanical-colabs/blob/main/notebooks/templates/TEMPLATE_marp_presentation.ipynb)
 
 ### `TEMPLATE_botanical_notebook.ipynb` — General Template
 Comprehensive general-purpose template for botanical science notebooks. Includes sections for literature review, data collection, analysis, visualization, and conclusions. Features built-in support for GBIF, Trefle, and other major botanical databases.

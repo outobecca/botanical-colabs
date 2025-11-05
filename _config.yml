@@ -1,4 +1,66 @@
+# Jekyll GitHub Pages Configuration
 theme: jekyll-theme-minimal
 title: Botanical Sciences Colab Notebooks
 description: A collection of reproducible Jupyter/Colab notebooks for practical botanical research
 show_downloads: true
+
+# ============================================================================
+# MyST / Jupyter Book Configuration
+# For building documentation with: jupyter-book build .
+# ============================================================================
+
+# Project information
+project: "Botanical Sciences Colab Notebooks"
+author: "Pekka Sihvonen"
+copyright: "2025, Pekka Sihvonen"
+version: "2.0"
+
+# MyST extensions - Enable advanced markdown features
+myst_enable_extensions:
+  - dollarmath        # $...$ and $$...$$ for math
+  - amsmath           # Advanced math environments
+  - deflist           # Definition lists
+  - colon_fence       # ::: fences instead of ```
+  - smartquotes       # Convert quotes to smart quotes
+  - linkify           # Auto-detect URLs
+  - substitution      # Variable substitution
+  - tasklist          # - [ ] and - [x] task lists
+  - attrs_inline      # {attribute} inline attributes
+  - attrs_block       # Block attributes
+
+# MyST substitutions (variables) - Use with {{ variable }}
+myst_substitutions:
+  project: "Botanical Colabs"
+  version: "2.0"
+  author: "Pekka Sihvonen"
+  repository: "https://github.com/outobecca/botanical-colabs"
+
+# HTML theme configuration for Jupyter Book
+html:
+  use_repository_button: true
+  use_issues_button: true
+  use_edit_page_button: true
+
+# Repository configuration
+repository:
+  url: https://github.com/outobecca/botanical-colabs
+  branch: main
+  path_to_docs: notebooks/
+
+# Execution configuration
+execute:
+  execute_notebooks: cache  # cache | auto | off | force
+  cache: ""
+  exclude_patterns:
+    - "*.ipynb_checkpoints/*"
+    - "*backup*"
+  timeout: 300
+
+# Bibliography
+bibtex_bibfiles:
+  - references.bib
+
+# LaTeX configuration for PDF export
+latex:
+  latex_documents:
+    targetname: botanical-colabs.tex

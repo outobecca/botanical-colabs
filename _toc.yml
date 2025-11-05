@@ -1,0 +1,57 @@
+# Table of Contents for Jupyter Book
+# This file defines the structure of your documentation
+
+format: jb-book
+root: README
+title: Botanical Sciences Colab Notebooks
+
+parts:
+  - caption: Getting Started
+    chapters:
+      - file: API_SETUP
+      - file: CONTRIBUTING
+
+  - caption: Templates
+    chapters:
+      - file: notebooks/templates/README
+      - file: notebooks/templates/TEMPLATE_botanical_notebook
+      - file: notebooks/templates/TEMPLATE_data_analysis
+      - file: notebooks/templates/TEMPLATE_machine_learning
+      - file: notebooks/templates/TEMPLATE_environmental_monitoring
+      - file: notebooks/templates/TEMPLATE_myst_scientific
+      - file: notebooks/templates/TEMPLATE_marp_presentation
+
+  - caption: Agrology
+    chapters:
+      - file: notebooks/agrology/README
+      - file: notebooks/agrology/data_analysis_exploration
+      - file: notebooks/agrology/environmental_management
+      - file: notebooks/agrology/fertilizer_calculations
+
+  - caption: Greenhouse
+    chapters:
+      - file: notebooks/greenhouse/README
+      - file: notebooks/greenhouse/ml_yield_prediction
+      - file: notebooks/greenhouse/data_visualization
+      - file: notebooks/greenhouse/lighting_setup_analyzer
+
+  - caption: Regional
+    chapters:
+      - file: notebooks/regional/README
+      - file: notebooks/regional/finnish_weather_analysis
+
+  - caption: Education
+    chapters:
+      - file: notebooks/education/README
+      - file: notebooks/education/education_tutorial
+
+  - caption: Examples
+    chapters:
+      - file: notebooks/examples/README
+      - file: notebooks/examples/generator-plant-card
+      - file: notebooks/examples/batch-plant-cards
+
+  - caption: Reference
+    chapters:
+      - file: CHANGELOG
+      - file: LICENSE
