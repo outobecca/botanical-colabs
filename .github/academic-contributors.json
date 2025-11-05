@@ -14,5 +14,21 @@
     "verified_date": "2025-11-05",
     "verified_by": "outobecca",
     "notes": "Repository owner and primary maintainer"
+  },
+  {
+    "github_username": "pekka",
+    "full_name": "Pekka [Last Name]",
+    "institution": "[Your University]",
+    "department": "[Your Department]",
+    "role": "PhD Student",
+    "email": "pekka@university.edu",
+    "research_interests": [
+      "Botanical research",
+      "Data analysis",
+      "Scientific computing"
+    ],
+    "verified_date": "2025-11-05",
+    "verified_by": "outobecca",
+    "notes": "Active contributor, Finnish weather analysis specialist"
   }
 ]
