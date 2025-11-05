@@ -99,12 +99,9 @@ html:
   use_repository_button: true
   use_issues_button: true
   use_edit_page_button: true
-
-# Repository configuration
-repository:
-  url: https://github.com/outobecca/botanical-colabs
-  branch: main
-  path_to_docs: notebooks/
+  repository_url: https://github.com/outobecca/botanical-colabs
+  repository_branch: main
+  path_to_book: notebooks/
 
 # Execution configuration
 execute:
