@@ -1187,6 +1187,118 @@ footer::before {
     60%, 100% { content: '...'; }
 }
 
+/* Google Translate Widget Styling */
+.translate-widget {
+    display: inline-block;
+}
+
+#google_translate_element {
+    display: inline-block;
+}
+
+/* Hide the Google Translate banner at top */
+.goog-te-banner-frame.skiptranslate {
+    display: none !important;
+}
+
+body {
+    top: 0 !important;
+}
+
+/* Style the Google Translate dropdown */
+.goog-te-gadget {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif !important;
+    font-size: 0 !important;
+}
+
+.goog-te-gadget-simple {
+    background: rgba(88, 166, 255, 0.1) !important;
+    border: 1px solid rgba(88, 166, 255, 0.3) !important;
+    border-radius: 20px !important;
+    padding: 8px 16px !important;
+    font-size: 0.95em !important;
+    color: #58a6ff !important;
+    transition: all 0.3s ease !important;
+    cursor: pointer !important;
+}
+
+.goog-te-gadget-simple:hover {
+    background: rgba(88, 166, 255, 0.2) !important;
+    border-color: #58a6ff !important;
+}
+
+.goog-te-gadget-icon {
+    display: none !important;
+}
+
+.goog-te-gadget-simple .goog-te-menu-value {
+    color: #58a6ff !important;
+}
+
+.goog-te-gadget-simple .goog-te-menu-value span {
+    color: #58a6ff !important;
+    font-size: 0.95em !important;
+}
+
+.goog-te-gadget-simple .goog-te-menu-value span:first-child {
+    display: none !important;
+}
+
+.goog-te-gadget-simple .goog-te-menu-value:before {
+    content: '🌐 ';
+    font-size: 1.1em;
+}
+
+/* Style the dropdown menu */
+.goog-te-menu-frame {
+    max-height: 400px !important;
+    overflow-y: auto !important;
+}
+
+.goog-te-menu2 {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    background: #161b22 !important;
+    border: 1px solid #30363d !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5) !important;
+}
+
+.goog-te-menu2-item div,
+.goog-te-menu2-item:link div,
+.goog-te-menu2-item:visited div,
+.goog-te-menu2-item:active div {
+    color: #c9d1d9 !important;
+    background-color: transparent !important;
+    border: none !important;
+}
+
+.goog-te-menu2-item:hover div {
+    background-color: rgba(88, 166, 255, 0.1) !important;
+    color: #58a6ff !important;
+}
+
+.goog-te-menu2-item-selected div {
+    background-color: rgba(88, 166, 255, 0.2) !important;
+    color: #58a6ff !important;
+}
+
+/* Mobile responsive for translate widget */
+@media (max-width: 768px) {
+    .translate-widget {
+        margin-top: 10px;
+        width: 100%;
+    }
+    
+    #google_translate_element {
+        width: 100%;
+    }
+    
+    .goog-te-gadget-simple {
+        width: 100%;
+        text-align: center;
+    }
+}
+
 /* Technology/Skill Badges (for potential use) */
 .tech-stack {
     display: flex;
