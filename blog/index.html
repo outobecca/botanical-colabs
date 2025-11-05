@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Botanical Sciences</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked@9.1.2/marked.min.js"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-brand">🌿 Botanical Colabs</a>
+            <div class="nav-links">
+                <a href="../index.html#notebooks">Notebooks</a>
+                <a href="../blog/">Blog</a>
+                <a href="../index.html#about">About</a>
+                <a href="https://github.com/outobecca/botanical-colabs">GitHub</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section class="blog-section">
+            <h2 class="section-title">Botanical Science Blog</h2>
+            <p class="section-description">Discover how researchers use these notebooks in botanical science</p>
+            <div class="blog-grid" id="blog-posts">
+                <div class="loading">Loading blog posts...</div>
+            </div>
+        </section>
+        
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Botanical Colabs</h4>
+                    <p>Open science tools for plant research</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../notebooks/">All Notebooks</a></li>
+                        <li><a href="https://github.com/outobecca/botanical-colabs">GitHub</a></li>
+                        <li><a href="../API_SETUP.md">API Setup</a></li>
+                        <li><a href="../CONTRIBUTING.md">Contributing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="../TEMPLATE_GUIDE.md">Template Guide</a></li>
+                        <li><a href="../MYST_MARP_GUIDE.md">MyST & Marp</a></li>
+                        <li><a href="../QUICKSTART.md">Quick Start</a></li>
+                        <li><a href="../CHANGELOG.md">Changelog</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Maintained by Pekka Sihvonen | MIT License | © 2025</p>
+            </div>
+        </footer>
+    </div>
+    
+    <script>
+        // Load blog posts
+        async function loadBlogPosts() {
+            const blogContainer = document.getElementById('blog-posts');
+            
+            const posts = [
+                {
+                    title: 'Welcome to Botanical Colabs Blog',
+                    date: 'November 5, 2025',
+                    excerpt: 'We are excited to launch the Botanical Sciences Colab Notebooks blog! This blog will showcase how researchers, educators, and hobbyists use our notebooks in real-world botanical science applications.',
+                    link: '../_posts/2025-11-05-welcome-to-botanical-colabs-blog.md'
+                }
+            ];
+            
+            blogContainer.innerHTML = posts.map(post => `
+                <div class="blog-card">
+                    <div class="blog-date">${post.date}</div>
+                    <h3>${post.title}</h3>
+                    <p>${post.excerpt}</p>
+                    <a href="${post.link}" class="category-link">Read More →</a>
+                </div>
+            `).join('');
+        }
+        
+        document.addEventListener('DOMContentLoaded', loadBlogPosts);
+    </script>
+</body>
+</html>
