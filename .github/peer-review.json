@@ -1,0 +1,282 @@
+{
+  "notebooks": {
+    "notebooks/templates/TEMPLATE_botanical_notebook.ipynb": {
+      "reviews": [
+        {
+          "reviewer": "pekka-sihvonen",
+          "date": "2025-01-15",
+          "vote": "approve",
+          "category": "methodology",
+          "comment": "Well-documented API integration with proper error handling"
+        },
+        {
+          "reviewer": "contributor-1",
+          "date": "2025-01-20",
+          "vote": "approve",
+          "category": "accuracy",
+          "comment": "Taxonomic data sources are authoritative and properly cited"
+        }
+      ],
+      "metadata": {
+        "ai_generated": true,
+        "ai_assistant": "GitHub Copilot",
+        "peer_reviewed": true,
+        "review_status": "approved",
+        "approval_date": "2025-01-20",
+        "required_reviews": 2,
+        "current_reviews": 2,
+        "categories_approved": ["methodology", "accuracy", "documentation"]
+      }
+    },
+    "notebooks/templates/TEMPLATE_myst_scientific.ipynb": {
+      "reviews": [
+        {
+          "reviewer": "pekka-sihvonen",
+          "date": "2025-11-04",
+          "vote": "approve",
+          "category": "documentation",
+          "comment": "Excellent MyST documentation features with proper citations"
+        }
+      ],
+      "metadata": {
+        "ai_generated": true,
+        "ai_assistant": "GitHub Copilot",
+        "peer_reviewed": false,
+        "review_status": "in_review",
+        "required_reviews": 2,
+        "current_reviews": 1,
+        "categories_approved": ["documentation"]
+      }
+    },
+    "notebooks/templates/TEMPLATE_marp_presentation.ipynb": {
+      "reviews": [],
+      "metadata": {
+        "ai_generated": true,
+        "ai_assistant": "GitHub Copilot",
+        "peer_reviewed": false,
+        "review_status": "pending",
+        "required_reviews": 2,
+        "current_reviews": 0,
+        "categories_approved": []
+      }
+    },
+    "notebooks/templates/TEMPLATE_data_analysis.ipynb": {
+      "reviews": [],
+      "metadata": {
+        "ai_generated": true,
+        "ai_assistant": "GitHub Copilot",
+        "peer_reviewed": false,
+        "review_status": "pending",
+        "required_reviews": 2,
+        "current_reviews": 0,
+        "categories_approved": []
+      }
+    },
+    "notebooks/templates/TEMPLATE_machine_learning.ipynb": {
+      "reviews": [],
+      "metadata": {
+        "ai_generated": true,
+        "ai_assistant": "GitHub Copilot",
+        "peer_reviewed": false,
+        "review_status": "pending",
+        "required_reviews": 2,
+        "current_reviews": 0,
+        "categories_approved": []
+      }
+    },
+    "notebooks/templates/TEMPLATE_environmental_monitoring.ipynb": {
+      "reviews": [],
+      "metadata": {
+        "ai_generated": true,
+        "ai_assistant": "GitHub Copilot",
+        "peer_reviewed": false,
+        "review_status": "pending",
+        "required_reviews": 2,
+        "current_reviews": 0,
+        "categories_approved": []
+      }
+    },
+    "notebooks/agrology/data_analysis_exploration.ipynb": {
+      "reviews": [],
+      "metadata": {
+        "ai_generated": true,
+        "ai_assistant": "GitHub Copilot",
+        "peer_reviewed": false,
+        "review_status": "pending",
+        "required_reviews": 2,
+        "current_reviews": 0,
+        "categories_approved": []
+      }
+    },
+    "notebooks/agrology/environmental_management.ipynb": {
+      "reviews": [],
+      "metadata": {
+        "ai_generated": true,
+        "ai_assistant": "GitHub Copilot",
+        "peer_reviewed": false,
+        "review_status": "pending",
+        "required_reviews": 2,
+        "current_reviews": 0,
+        "categories_approved": []
+      }
+    },
+    "notebooks/agrology/fertilizer_calculations.ipynb": {
+      "reviews": [],
+      "metadata": {
+        "ai_generated": true,
+        "ai_assistant": "GitHub Copilot",
+        "peer_reviewed": false,
+        "review_status": "pending",
+        "required_reviews": 2,
+        "current_reviews": 0,
+        "categories_approved": []
+      }
+    },
+    "notebooks/greenhouse/data_visualization.ipynb": {
+      "reviews": [],
+      "metadata": {
+        "ai_generated": true,
+        "ai_assistant": "GitHub Copilot",
+        "peer_reviewed": false,
+        "review_status": "pending",
+        "required_reviews": 2,
+        "current_reviews": 0,
+        "categories_approved": []
+      }
+    },
+    "notebooks/greenhouse/lighting_setup_analyzer.ipynb": {
+      "reviews": [],
+      "metadata": {
+        "ai_generated": true,
+        "ai_assistant": "GitHub Copilot",
+        "peer_reviewed": false,
+        "review_status": "pending",
+        "required_reviews": 2,
+        "current_reviews": 0,
+        "categories_approved": []
+      }
+    },
+    "notebooks/greenhouse/ml_yield_prediction.ipynb": {
+      "reviews": [],
+      "metadata": {
+        "ai_generated": true,
+        "ai_assistant": "GitHub Copilot",
+        "peer_reviewed": false,
+        "review_status": "pending",
+        "required_reviews": 2,
+        "current_reviews": 0,
+        "categories_approved": []
+      }
+    },
+    "notebooks/education/education_tutorial.ipynb": {
+      "reviews": [],
+      "metadata": {
+        "ai_generated": true,
+        "ai_assistant": "GitHub Copilot",
+        "peer_reviewed": false,
+        "review_status": "pending",
+        "required_reviews": 1,
+        "current_reviews": 0,
+        "categories_approved": []
+      }
+    },
+    "notebooks/regional/finnish_weather_analysis.ipynb": {
+      "reviews": [],
+      "metadata": {
+        "ai_generated": false,
+        "peer_reviewed": false,
+        "review_status": "pending",
+        "required_reviews": 1,
+        "current_reviews": 0,
+        "categories_approved": []
+      }
+    },
+    "notebooks/examples/generator-plant-card.ipynb": {
+      "reviews": [
+        {
+          "reviewer": "pekka-sihvonen",
+          "date": "2024-11-10",
+          "vote": "approve",
+          "category": "accuracy",
+          "comment": "Multi-source validation ensures data quality"
+        },
+        {
+          "reviewer": "contributor-2",
+          "date": "2024-11-15",
+          "vote": "approve",
+          "category": "methodology",
+          "comment": "Proper API integration with rate limiting"
+        }
+      ],
+      "metadata": {
+        "ai_generated": true,
+        "ai_assistant": "GitHub Copilot",
+        "peer_reviewed": true,
+        "review_status": "approved",
+        "approval_date": "2024-11-15",
+        "required_reviews": 2,
+        "current_reviews": 2,
+        "categories_approved": ["accuracy", "methodology", "usability"]
+      }
+    },
+    "notebooks/examples/batch-plant-cards.ipynb": {
+      "reviews": [
+        {
+          "reviewer": "pekka-sihvonen",
+          "date": "2024-12-01",
+          "vote": "approve",
+          "category": "methodology",
+          "comment": "Efficient batch processing with proper error handling"
+        }
+      ],
+      "metadata": {
+        "ai_generated": true,
+        "ai_assistant": "GitHub Copilot",
+        "peer_reviewed": false,
+        "review_status": "in_review",
+        "required_reviews": 2,
+        "current_reviews": 1,
+        "categories_approved": ["methodology"]
+      }
+    }
+  },
+  "review_categories": [
+    {
+      "id": "accuracy",
+      "name": "Scientific Accuracy",
+      "description": "Data sources are authoritative, results are reproducible, and methodology is sound"
+    },
+    {
+      "id": "methodology",
+      "name": "Methodology",
+      "description": "Code follows best practices, proper error handling, efficient algorithms"
+    },
+    {
+      "id": "documentation",
+      "name": "Documentation",
+      "description": "Clear explanations, proper citations, comprehensive comments"
+    },
+    {
+      "id": "usability",
+      "name": "Usability",
+      "description": "Easy to use, clear instructions, good user experience"
+    },
+    {
+      "id": "reproducibility",
+      "name": "Reproducibility",
+      "description": "Results can be reproduced with given instructions and dependencies"
+    }
+  ],
+  "settings": {
+    "required_reviews_for_approval": 2,
+    "allowed_reviewers": [
+      "pekka-sihvonen",
+      "contributor-1",
+      "contributor-2",
+      "reviewer-botanist",
+      "reviewer-data-scientist"
+    ],
+    "review_expiry_days": 365,
+    "auto_revoke_on_major_change": true
+  }
+}
