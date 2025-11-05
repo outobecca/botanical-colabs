@@ -126,10 +126,28 @@ function setupStickyNavbar() {
     
     window.addEventListener('scroll', () => {
         if (window.scrollY > 100) {
-            navbar.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.5)';
+            navbar.style.boxShadow = '0 8px 20px rgba(0, 0, 0, 0.6)';
+            navbar.classList.add('scrolled');
         } else {
-            navbar.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.3)';
+            navbar.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.4)';
+            navbar.classList.remove('scrolled');
         }
+    });
+}
+
+// Add mouse tracking for category cards
+function setupCardMouseTracking() {
+    const cards = document.querySelectorAll('.category-card');
+    
+    cards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = ((e.clientX - rect.left) / rect.width) * 100;
+            const y = ((e.clientY - rect.top) / rect.height) * 100;
+            
+            card.style.setProperty('--mouse-x', `${x}%`);
+            card.style.setProperty('--mouse-y', `${y}%`);
+        });
     });
 }
 
@@ -140,4 +158,5 @@ document.addEventListener('DOMContentLoaded', () => {
     loadBlogPosts();
     setupSmoothScrolling();
     setupStickyNavbar();
+    setupCardMouseTracking();
 });

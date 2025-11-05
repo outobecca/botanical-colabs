@@ -45,6 +45,7 @@
                 <a href="#blog">Blog</a>
                 <a href="#about">About</a>
                 <a href="https://github.com/outobecca/botanical-colabs">GitHub</a>
+                <div id="google_translate_element" class="translate-widget"></div>
             </div>
         </div>
     </nav>
@@ -145,5 +146,18 @@
     </div>
     
     <script src="script.js"></script>
+    
+    <!-- Google Translate Widget -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'en,es,fr,de,it,pt,zh-CN,zh-TW,ja,ko,ar,ru,hi,bn,pa,te,mr,ta,ur,gu,kn,ml,or,pl,uk,ro,nl,el,tr,vi,th,id,ms,fil,sv,no,da,fi,cs,hu,bg,hr,sk,sl',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
