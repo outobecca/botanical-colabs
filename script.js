@@ -1,6 +1,165 @@
 // GitHub repository information
 const GITHUB_REPO = 'outobecca/botanical-colabs';
 const GITHUB_BRANCH = 'main';
+const GITHUB_API_BASE = 'https://api.github.com';
+
+// Fetch repository statistics from GitHub API
+async function fetchRepoStats() {
+    try {
+        // Fetch basic repo info
+        const repoResponse = await fetch(`${GITHUB_API_BASE}/repos/${GITHUB_REPO}`);
+        const repoData = await repoResponse.json();
+        
+        // Fetch contributors
+        const contributorsResponse = await fetch(`${GITHUB_API_BASE}/repos/${GITHUB_REPO}/contributors`);
+        const contributorsData = await contributorsResponse.json();
+        
+        // Fetch latest commit
+        const commitsResponse = await fetch(`${GITHUB_API_BASE}/repos/${GITHUB_REPO}/commits?per_page=1`);
+        const commitsData = await commitsResponse.json();
+        
+        // Count notebooks by scanning the tree
+        const treeResponse = await fetch(`${GITHUB_API_BASE}/repos/${GITHUB_REPO}/git/trees/${GITHUB_BRANCH}?recursive=1`);
+        const treeData = await treeResponse.json();
+        const notebookCount = treeData.tree.filter(item => item.path.endsWith('.ipynb')).length;
+        
+        return {
+            stars: repoData.stargazers_count || 0,
+            forks: repoData.forks_count || 0,
+            watchers: repoData.subscribers_count || 0,
+            openIssues: repoData.open_issues_count || 0,
+            contributors: contributorsData.length || 0,
+            notebooks: notebookCount || 15,
+            lastUpdate: commitsData[0]?.commit?.author?.date || repoData.updated_at,
+            language: repoData.language || 'Jupyter Notebook',
+            size: repoData.size || 0
+        };
+    } catch (error) {
+        console.error('Error fetching repo stats:', error);
+        return {
+            stars: 0,
+            forks: 0,
+            watchers: 0,
+            openIssues: 0,
+            contributors: 1,
+            notebooks: 15,
+            lastUpdate: new Date().toISOString(),
+            language: 'Jupyter Notebook',
+            size: 0
+        };
+    }
+}
+
+// Update statistics on the page
+async function updateRepoStats() {
+    const stats = await fetchRepoStats();
+    
+    // Update hero stats
+    const heroStats = document.querySelectorAll('.hero-stats .stat');
+    if (heroStats.length >= 3) {
+        // Update notebooks count
+        heroStats[1].querySelector('.stat-number').textContent = `${stats.notebooks}+`;
+    }
+    
+    // Add repository stats section if it doesn't exist
+    let statsSection = document.getElementById('repo-stats');
+    if (!statsSection) {
+        const container = document.querySelector('.container');
+        if (container) {
+            const statsHTML = `
+                <section id="repo-stats" class="repo-stats-section">
+                    <h2 class="section-title">📊 Repository Statistics</h2>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon">⭐</div>
+                            <div class="stat-value" id="stat-stars">${stats.stars}</div>
+                            <div class="stat-label">Stars</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">🍴</div>
+                            <div class="stat-value" id="stat-forks">${stats.forks}</div>
+                            <div class="stat-label">Forks</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">👀</div>
+                            <div class="stat-value" id="stat-watchers">${stats.watchers}</div>
+                            <div class="stat-label">Watchers</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">👥</div>
+                            <div class="stat-value" id="stat-contributors">${stats.contributors}</div>
+                            <div class="stat-label">Contributors</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">📓</div>
+                            <div class="stat-value" id="stat-notebooks">${stats.notebooks}</div>
+                            <div class="stat-label">Notebooks</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">🐛</div>
+                            <div class="stat-value" id="stat-issues">${stats.openIssues}</div>
+                            <div class="stat-label">Open Issues</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">🕐</div>
+                            <div class="stat-value" id="stat-updated">${formatDate(stats.lastUpdate)}</div>
+                            <div class="stat-label">Last Updated</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">💾</div>
+                            <div class="stat-value" id="stat-size">${formatSize(stats.size)}</div>
+                            <div class="stat-label">Repository Size</div>
+                        </div>
+                    </div>
+                    <div class="stats-footer">
+                        <p>Live data from <a href="https://github.com/${GITHUB_REPO}" target="_blank">GitHub Repository</a></p>
+                    </div>
+                </section>
+            `;
+            
+            // Insert before the quality section
+            const qualitySection = document.getElementById('quality');
+            if (qualitySection) {
+                qualitySection.insertAdjacentHTML('beforebegin', statsHTML);
+            } else {
+                container.insertAdjacentHTML('beforeend', statsHTML);
+            }
+        }
+    } else {
+        // Update existing stats
+        document.getElementById('stat-stars').textContent = stats.stars;
+        document.getElementById('stat-forks').textContent = stats.forks;
+        document.getElementById('stat-watchers').textContent = stats.watchers;
+        document.getElementById('stat-contributors').textContent = stats.contributors;
+        document.getElementById('stat-notebooks').textContent = stats.notebooks;
+        document.getElementById('stat-issues').textContent = stats.openIssues;
+        document.getElementById('stat-updated').textContent = formatDate(stats.lastUpdate);
+        document.getElementById('stat-size').textContent = formatSize(stats.size);
+    }
+}
+
+// Format date for display
+function formatDate(dateString) {
+    const date = new Date(dateString);
+    const now = new Date();
+    const diffTime = Math.abs(now - date);
+    const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+    
+    if (diffDays === 0) return 'Today';
+    if (diffDays === 1) return 'Yesterday';
+    if (diffDays < 7) return `${diffDays} days ago`;
+    if (diffDays < 30) return `${Math.floor(diffDays / 7)} weeks ago`;
+    if (diffDays < 365) return `${Math.floor(diffDays / 30)} months ago`;
+    return `${Math.floor(diffDays / 365)} years ago`;
+}
+
+// Format file size
+function formatSize(kb) {
+    if (kb < 1024) return `${kb} KB`;
+    if (kb < 1024 * 1024) return `${(kb / 1024).toFixed(1)} MB`;
+    return `${(kb / (1024 * 1024)).toFixed(1)} GB`;
+}
+
 
 // Load and render README content
 async function loadReadme() {
@@ -164,6 +323,7 @@ document.addEventListener('DOMContentLoaded', () => {
     loadReadme();
     loadNotebooks();
     loadBlogPosts();
+    updateRepoStats();
     setupSmoothScrolling();
     setupStickyNavbar();
     setupCardMouseTracking();
