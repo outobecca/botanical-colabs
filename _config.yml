@@ -7,6 +7,7 @@ description: A collection of reproducible Jupyter/Colab notebooks for practical 
 url: https://outobecca.github.io
 baseurl: /botanical-colabs
 author: Pekka Sihvonen
+repository: outobecca/botanical-colabs
 
 # GitHub Pages theme
 theme: jekyll-theme-minimal
