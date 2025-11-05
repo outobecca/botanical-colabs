@@ -1392,3 +1392,371 @@ body {
     color: #58a6ff;
     padding-left: 10px;
 }
+
+/* Development & CI/CD Section */
+.development-section {
+    padding: 80px 20px;
+    background: linear-gradient(180deg, #0d1117 0%, #161b22 50%, #0d1117 100%);
+}
+
+.workflow-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.workflow-card {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 12px;
+    padding: 30px;
+    transition: all 0.3s ease;
+}
+
+.workflow-card:hover {
+    border-color: #58a6ff;
+    box-shadow: 0 8px 30px rgba(88, 166, 255, 0.15);
+    transform: translateY(-5px);
+}
+
+.workflow-highlight {
+    background: linear-gradient(135deg, rgba(88, 166, 255, 0.1) 0%, rgba(46, 160, 67, 0.1) 100%);
+    border: 2px solid #58a6ff;
+}
+
+.workflow-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.workflow-icon {
+    font-size: 2.5em;
+    filter: drop-shadow(0 0 10px rgba(88, 166, 255, 0.3));
+}
+
+.workflow-header h3 {
+    color: #e4e4e4;
+    font-size: 1.5em;
+    margin: 0;
+    flex: 1;
+}
+
+.workflow-trigger {
+    font-size: 0.85em;
+    color: #8b949e;
+    background: #21262d;
+    padding: 5px 12px;
+    border-radius: 15px;
+    border: 1px solid #30363d;
+}
+
+.workflow-details h4 {
+    color: #58a6ff;
+    font-size: 1.1em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.workflow-details ul {
+    list-style: none;
+    padding: 0;
+}
+
+.workflow-details li {
+    padding: 8px 0;
+    padding-left: 25px;
+    position: relative;
+    color: #c9d1d9;
+}
+
+.workflow-details li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    color: #2ea043;
+}
+
+.workflow-details strong {
+    color: #e4e4e4;
+}
+
+.workflow-details code {
+    background: #21262d;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-family: "Courier New", monospace;
+    font-size: 0.9em;
+    color: #79c0ff;
+}
+
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.tech-tag {
+    background: #21262d;
+    color: #58a6ff;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85em;
+    border: 1px solid #30363d;
+    font-weight: 500;
+}
+
+.workflow-badges {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.badge {
+    padding: 6px 14px;
+    border-radius: 15px;
+    font-size: 0.85em;
+    font-weight: 600;
+}
+
+.badge-success {
+    background: rgba(46, 160, 67, 0.2);
+    color: #2ea043;
+    border: 1px solid #2ea043;
+}
+
+.badge-info {
+    background: rgba(88, 166, 255, 0.2);
+    color: #58a6ff;
+    border: 1px solid #58a6ff;
+}
+
+.workflow-status {
+    margin-top: 20px;
+    padding: 15px;
+    background: #0d1117;
+    border-radius: 8px;
+    border-left: 4px solid #2ea043;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.status-badge {
+    padding: 5px 12px;
+    border-radius: 12px;
+    font-size: 0.85em;
+    font-weight: 600;
+}
+
+.status-active {
+    background: rgba(46, 160, 67, 0.2);
+    color: #2ea043;
+}
+
+.status-deployed {
+    background: rgba(88, 166, 255, 0.2);
+    color: #58a6ff;
+}
+
+.status-detail {
+    color: #8b949e;
+    font-size: 0.9em;
+}
+
+.workflow-steps {
+    list-style: none;
+    padding: 0;
+}
+
+.workflow-steps li {
+    padding: 15px 20px;
+    margin: 10px 0;
+    background: #0d1117;
+    border-radius: 8px;
+    border-left: 4px solid #58a6ff;
+}
+
+.workflow-steps li strong {
+    display: block;
+    color: #e4e4e4;
+    font-size: 1.05em;
+    margin-bottom: 5px;
+}
+
+.workflow-steps li span {
+    color: #8b949e;
+    font-size: 0.9em;
+}
+
+.best-practices {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.practice-item {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+    padding: 15px;
+    background: #0d1117;
+    border-radius: 8px;
+}
+
+.practice-icon {
+    font-size: 2em;
+    flex-shrink: 0;
+}
+
+.practice-item strong {
+    display: block;
+    color: #e4e4e4;
+    margin-bottom: 5px;
+}
+
+.practice-item p {
+    color: #8b949e;
+    margin: 0;
+    font-size: 0.95em;
+}
+
+.code-block {
+    background: #0d1117;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    margin: 15px 0;
+    overflow: hidden;
+}
+
+.code-block pre {
+    margin: 0;
+    padding: 20px;
+    overflow-x: auto;
+}
+
+.code-block code {
+    font-family: "Courier New", monospace;
+    font-size: 0.9em;
+    line-height: 1.6;
+    color: #c9d1d9;
+}
+
+.workflow-diagram {
+    margin-top: 60px;
+    padding: 40px;
+    background: #161b22;
+    border-radius: 12px;
+    border: 1px solid #30363d;
+}
+
+.pipeline-flow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.pipeline-step {
+    text-align: center;
+    flex: 0 0 auto;
+}
+
+.step-icon {
+    font-size: 3em;
+    margin-bottom: 10px;
+    filter: drop-shadow(0 0 15px rgba(88, 166, 255, 0.3));
+}
+
+.step-label {
+    font-weight: 600;
+    color: #e4e4e4;
+    margin-bottom: 5px;
+    font-size: 1.1em;
+}
+
+.step-detail {
+    font-size: 0.85em;
+    color: #8b949e;
+}
+
+.pipeline-arrow {
+    font-size: 2em;
+    color: #58a6ff;
+    font-weight: bold;
+}
+
+.tech-stack {
+    margin-top: 60px;
+    padding: 40px;
+    background: linear-gradient(135deg, rgba(88, 166, 255, 0.05) 0%, rgba(46, 160, 67, 0.05) 100%);
+    border-radius: 12px;
+    border: 1px solid #30363d;
+}
+
+.tech-categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.tech-category h4 {
+    color: #e4e4e4;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.tech-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tech-items span {
+    background: #161b22;
+    color: #c9d1d9;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    border: 1px solid #30363d;
+    transition: all 0.3s ease;
+}
+
+.tech-items span:hover {
+    background: #21262d;
+    border-color: #58a6ff;
+    color: #58a6ff;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .workflow-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .pipeline-flow {
+        flex-direction: column;
+    }
+    
+    .pipeline-arrow {
+        transform: rotate(90deg);
+    }
+    
+    .tech-categories {
+        grid-template-columns: 1fr;
+    }
+}
