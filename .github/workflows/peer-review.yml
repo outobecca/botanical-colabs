@@ -1,0 +1,260 @@
+name: Peer Review System
+
+on:
+  pull_request:
+    types: [opened, synchronize, labeled]
+    paths:
+      - 'notebooks/**'
+      - '.github/peer-review.json'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+jobs:
+  check-peer-review:
+    name: Check Peer Review Status
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: Check for peer review label
+        id: check-label
+        run: |
+          if [ "${{ contains(github.event.pull_request.labels.*.name, 'peer-review-request') }}" == "true" ]; then
+            echo "peer_review_requested=true" >> $GITHUB_OUTPUT
+          else
+            echo "peer_review_requested=false" >> $GITHUB_OUTPUT
+          fi
+      
+      - name: Validate peer-review.json
+        if: steps.check-label.outputs.peer_review_requested == 'true'
+        run: |
+          echo "Validating peer review data..."
+          python3 << 'EOF'
+          import json
+          import sys
+          
+          try:
+              with open('.github/peer-review.json', 'r') as f:
+                  data = json.load(f)
+              
+              # Validate structure
+              required_keys = ['notebooks', 'review_categories', 'settings']
+              for key in required_keys:
+                  if key not in data:
+                      print(f"Error: Missing required key: {key}")
+                      sys.exit(1)
+              
+              print("✓ peer-review.json is valid")
+              
+              # Check review status
+              for notebook, info in data['notebooks'].items():
+                  status = info['metadata']['review_status']
+                  reviews = len(info['reviews'])
+                  required = info['metadata']['required_reviews']
+                  
+                  print(f"\n{notebook}:")
+                  print(f"  Status: {status}")
+                  print(f"  Reviews: {reviews}/{required}")
+                  print(f"  Peer Reviewed: {info['metadata']['peer_reviewed']}")
+                  print(f"  AI Generated: {info['metadata']['ai_generated']}")
+          
+          except Exception as e:
+              print(f"Error validating peer-review.json: {e}")
+              sys.exit(1)
+          EOF
+      
+      - name: Generate review status comment
+        if: steps.check-label.outputs.peer_review_requested == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const reviewData = JSON.parse(fs.readFileSync('.github/peer-review.json', 'utf8'));
+            
+            let comment = '## 📊 Peer Review Status\n\n';
+            
+            // Get changed notebooks
+            const { data: files } = await github.rest.pulls.listFiles({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.issue.number
+            });
+            
+            const changedNotebooks = files
+              .filter(f => f.filename.endsWith('.ipynb'))
+              .map(f => f.filename);
+            
+            if (changedNotebooks.length === 0) {
+              comment += '> No notebook files changed in this PR.\n';
+            } else {
+              comment += '### Changed Notebooks:\n\n';
+              
+              for (const notebook of changedNotebooks) {
+                const info = reviewData.notebooks[notebook];
+                
+                if (!info) {
+                  comment += `- **${notebook}**\n`;
+                  comment += '  - ⚠️ Not yet in peer review system\n';
+                  comment += '  - Add entry to `.github/peer-review.json` to enable reviews\n\n';
+                  continue;
+                }
+                
+                const meta = info.metadata;
+                const statusEmoji = {
+                  'approved': '✅',
+                  'in_review': '🔍',
+                  'pending': '⏳',
+                  'declined': '❌'
+                }[meta.review_status] || '❓';
+                
+                comment += `- **${notebook}** ${statusEmoji}\n`;
+                comment += `  - Status: **${meta.review_status.toUpperCase()}**\n`;
+                comment += `  - Reviews: ${meta.current_reviews}/${meta.required_reviews}\n`;
+                
+                if (meta.ai_generated) {
+                  comment += `  - 🤖 AI Generated (${info.metadata.ai_assistant || 'Unknown'})\n`;
+                }
+                
+                if (meta.peer_reviewed) {
+                  comment += `  - ✅ Peer Reviewed (Approved: ${meta.approval_date})\n`;
+                }
+                
+                if (info.reviews.length > 0) {
+                  comment += '  - **Reviews:**\n';
+                  for (const review of info.reviews) {
+                    const voteEmoji = review.vote === 'approve' ? '👍' : '👎';
+                    comment += `    - ${voteEmoji} @${review.reviewer} (${review.category}): ${review.comment}\n`;
+                  }
+                }
+                
+                comment += '\n';
+              }
+            }
+            
+            comment += '\n---\n\n';
+            comment += '### How to Review:\n\n';
+            comment += '1. Test the notebook in Google Colab\n';
+            comment += '2. Verify scientific accuracy and methodology\n';
+            comment += '3. Add your review to `.github/peer-review.json`\n';
+            comment += '4. Commit and push your review\n\n';
+            comment += 'See [PEER_REVIEW.md](../blob/main/PEER_REVIEW.md) for detailed guidelines.\n';
+            
+            github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: comment
+            });
+  
+  update-badges:
+    name: Update Notebook Badges
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      
+      - name: Update notebook badges
+        run: |
+          python3 << 'EOF'
+          import json
+          import glob
+          import re
+          
+          # Load review data
+          with open('.github/peer-review.json', 'r') as f:
+              review_data = json.load(f)
+          
+          def generate_badges(notebook_path):
+              """Generate badge HTML for a notebook"""
+              if notebook_path not in review_data['notebooks']:
+                  return ""
+              
+              info = review_data['notebooks'][notebook_path]
+              meta = info['metadata']
+              badges = []
+              
+              # Peer reviewed badge
+              if meta['peer_reviewed'] and meta['review_status'] == 'approved':
+                  badges.append(
+                      '<img src="https://img.shields.io/badge/Peer_Reviewed-✓-success" alt="Peer Reviewed">'
+                  )
+              elif meta['review_status'] == 'in_review':
+                  badges.append(
+                      f'<img src="https://img.shields.io/badge/In_Review-{meta["current_reviews"]}/{meta["required_reviews"]}-yellow" alt="In Review">'
+                  )
+              
+              # AI generated badge
+              if meta['ai_generated']:
+                  ai_tool = info['metadata'].get('ai_assistant', 'AI')
+                  badges.append(
+                      f'<img src="https://img.shields.io/badge/AI_Generated-{ai_tool}-blue" alt="AI Generated">'
+                  )
+              
+              # Category badges
+              if meta['categories_approved']:
+                  for category in meta['categories_approved'][:3]:  # Show max 3
+                      badges.append(
+                          f'<img src="https://img.shields.io/badge/{category}-✓-green" alt="{category}">'
+                      )
+              
+              return ' '.join(badges)
+          
+          # Update README badges section
+          print("Generating badge documentation...")
+          
+          badge_md = "# 🏆 Notebook Review Status\n\n"
+          badge_md += "Badges indicate peer review status and AI generation:\n\n"
+          badge_md += "| Notebook | Status | Details |\n"
+          badge_md += "|----------|--------|----------|\n"
+          
+          for notebook, info in review_data['notebooks'].items():
+              meta = info['metadata']
+              badges = generate_badges(notebook)
+              
+              status_icon = {
+                  'approved': '✅',
+                  'in_review': '🔍',
+                  'pending': '⏳',
+                  'declined': '❌'
+              }.get(meta['review_status'], '❓')
+              
+              details = []
+              if meta['peer_reviewed']:
+                  details.append(f"Approved: {meta.get('approval_date', 'N/A')}")
+              if meta['ai_generated']:
+                  details.append(f"AI: {info['metadata'].get('ai_assistant', 'Yes')}")
+              
+              notebook_name = notebook.split('/')[-1].replace('.ipynb', '')
+              badge_md += f"| {notebook_name} | {status_icon} | {', '.join(details) or 'Pending'} |\n"
+          
+          # Save to file
+          with open('NOTEBOOK_REVIEWS.md', 'w') as f:
+              f.write(badge_md)
+          
+          print("✓ Badge documentation generated")
+          EOF
+      
+      - name: Commit badge updates
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add NOTEBOOK_REVIEWS.md
+          if ! git diff --cached --quiet; then
+            git commit -m "docs: update notebook review badges"
+            git push
+          else
+            echo "No badge changes to commit"
+          fi

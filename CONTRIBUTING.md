@@ -315,6 +315,48 @@ If using AI (Gemini, GPT, etc.):
 - ✅ Encourage critical evaluation
 - ✅ Do not present as authoritative
 
+**Mark AI-generated notebooks** in `.github/peer-review.json`:
+```json
+"metadata": {
+  "ai_generated": true,
+  "ai_assistant": "GitHub Copilot"
+}
+```
+
+## 🔬 Peer Review Process
+
+All notebooks undergo peer review to ensure scientific accuracy and quality.
+
+### Review Requirements
+
+- **Templates:** 2 peer reviews required
+- **Examples:** 2 peer reviews required  
+- **Educational:** 1 peer review required
+- **Regional:** 1 peer review required
+
+### Review Categories
+
+- ✅ **Scientific Accuracy** — Data sources, taxonomy, results
+- ✅ **Methodology** — Code quality, algorithms, error handling
+- ✅ **Documentation** — Clarity, citations, instructions
+- ✅ **Usability** — Ease of use, interface, error messages
+- ✅ **Reproducibility** — Consistency, dependencies, instructions
+
+### How to Submit a Review
+
+1. **Test the notebook** thoroughly in Google Colab
+2. **Evaluate** against the review categories
+3. **Use the template** in `.github/PULL_REQUEST_TEMPLATE/peer_review.md`
+4. **Submit** your review by updating `.github/peer-review.json`
+
+**Full guidelines:** See [PEER_REVIEW.md](PEER_REVIEW.md)
+
+### Badges
+
+Approved notebooks earn badges:
+- ![Peer Reviewed](https://img.shields.io/badge/Peer_Reviewed-✓-success) — Verified by 2+ reviewers
+- ![AI Generated](https://img.shields.io/badge/AI_Generated-GitHub_Copilot-blue) — Created with AI assistance
+
 ## 💬 Communication
 
 - **Questions**: Open an issue with the `question` label
