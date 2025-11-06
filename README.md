@@ -37,6 +37,15 @@ This repository provides a comprehensive suite of tools and templates for plant 
 - 📄 [GitHub Pages Setup](GITHUB_PAGES.md)
 - ⭐ **[MyST & Marp Guide](MYST_MARP_GUIDE.md)** ← NEW!
 
+## 🏆 Badges
+
+Here's a list of badges used in this repository to indicate the status of each notebook:
+
+*   ![Under Review](https://img.shields.io/badge/status-under%20review-yellow) - This notebook is currently under peer review.
+*   ![Needs API Keys](https://img.shields.io/badge/status-needs%20api%20keys-red) - This notebook requires API keys to function.
+*   ![In Production](https://img.shields.io/badge/status-in%20production-green) - This notebook is considered stable and ready for general use.
+*   ![Experimental](https://img.shields.io/badge/status-experimental-orange) - This notebook is still under development and may not be stable.
+
 ## 📚 Notebook Organization
 
 Notebooks are organized into six specialized categories, each designed for specific use cases in botanical and agricultural science:

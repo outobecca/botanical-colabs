@@ -6,7 +6,7 @@ Region-specific horticultural analysis
 
 ### Finnish Weather Analysis
 - **File:** `finnish_weather_analysis.ipynb`
-- **Open in Colab:** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/outobecca/botanical-colabs/blob/main/notebooks/regional/finnish_weather_analysis.ipynb)
+- **Open in Colab:** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/outobecca/botanical-colabs/blob/main/notebooks/regional/finnish_weather_analysis.ipynb) [![Status](https://img.shields.io/badge/status-in%20production-green)](./)
 
 
 ## Category Purpose

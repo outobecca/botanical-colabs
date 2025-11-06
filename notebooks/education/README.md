@@ -6,7 +6,7 @@ Learning and training materials
 
 ### Education Tutorial
 - **File:** `education_tutorial.ipynb`
-- **Open in Colab:** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/outobecca/botanical-colabs/blob/main/notebooks/education/education_tutorial.ipynb)
+- **Open in Colab:** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/outobecca/botanical-colabs/blob/main/notebooks/education/education_tutorial.ipynb) [![Status](https://img.shields.io/badge/status-in%20production-green)](./)
 
 
 ## Category Purpose

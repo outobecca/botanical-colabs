@@ -8,7 +8,7 @@ Example implementations and demonstrations
 Multi-source plant information aggregator that fetches data from GBIF, Trefle, Wikipedia, Wikimedia Commons, and more. **Supports 9 languages!**
 
 - **File:** `generator-plant-card.ipynb`
-- **Open in Colab:** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/outobecca/botanical-colabs/blob/main/notebooks/examples/generator-plant-card.ipynb)
+- **Open in Colab:** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/outobecca/botanical-colabs/blob/main/notebooks/examples/generator-plant-card.ipynb) [![Status](https://img.shields.io/badge/status-in%20production-green)](./)
 
 **Features:**
 - 🌍 GBIF taxonomy and occurrence data

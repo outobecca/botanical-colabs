@@ -6,15 +6,15 @@ Protected cultivation and greenhouse management
 
 ### Ml Yield Prediction
 - **File:** `ml_yield_prediction.ipynb`
-- **Open in Colab:** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/outobecca/botanical-colabs/blob/main/notebooks/greenhouse/ml_yield_prediction.ipynb)
+- **Open in Colab:** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/outobecca/botanical-colabs/blob/main/notebooks/greenhouse/ml_yield_prediction.ipynb) [![Status](https://img.shields.io/badge/status-in%20production-green)](./)
 
 ### Data Visualization
 - **File:** `data_visualization.ipynb`
-- **Open in Colab:** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/outobecca/botanical-colabs/blob/main/notebooks/greenhouse/data_visualization.ipynb)
+- **Open in Colab:** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/outobecca/botanical-colabs/blob/main/notebooks/greenhouse/data_visualization.ipynb) [![Status](https://img.shields.io/badge/status-in%20production-green)](./)
 
 ### Lighting Setup Analyzer
 - **File:** `lighting_setup_analyzer.ipynb`
-- **Open in Colab:** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/outobecca/botanical-colabs/blob/main/notebooks/greenhouse/lighting_setup_analyzer.ipynb)
+- **Open in Colab:** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/outobecca/botanical-colabs/blob/main/notebooks/greenhouse/lighting_setup_analyzer.ipynb) [![Status](https://img.shields.io/badge/status-in%20production-green)](./)
 
 
 ## Category Purpose
