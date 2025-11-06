@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <defs>
+    <linearGradient id="leafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4CAF50;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2E7D32;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="16" cy="16" r="15" fill="#1e3a5f"/>
+  
+  <!-- Leaf shape -->
+  <path d="M 16,8 Q 24,12 24,20 Q 24,24 20,26 Q 18,27 16,26 L 16,8 Z" 
+        fill="url(#leafGrad)"/>
+  <path d="M 16,8 Q 8,12 8,20 Q 8,24 12,26 Q 14,27 16,26 L 16,8 Z" 
+        fill="url(#leafGrad)" opacity="0.8"/>
+  
+  <!-- Leaf vein -->
+  <line x1="16" y1="8" x2="16" y2="26" stroke="#1B5E20" stroke-width="1" opacity="0.6"/>
+  
+  <!-- Small accent dots (representing data/science) -->
+  <circle cx="20" cy="14" r="1" fill="#81C784" opacity="0.8"/>
+  <circle cx="12" cy="16" r="1" fill="#81C784" opacity="0.8"/>
+  <circle cx="18" cy="20" r="1" fill="#81C784" opacity="0.8"/>
+</svg>

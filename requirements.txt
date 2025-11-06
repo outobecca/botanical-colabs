@@ -47,3 +47,8 @@ jupyter-book>=0.15.0     # Build beautiful books from notebooks
 
 # Image handling (if needed for advanced features)
 # Pillow>=10.0.0          # Python Imaging Library
+
+# Mercury framework for web apps
+mercury>=2.3.3
+nbconvert>=7.16.4
+jupyter>=1.0.0
