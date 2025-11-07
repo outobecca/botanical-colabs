@@ -2200,3 +2200,49 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+/* AI Chat Section */
+.ai-chat-section {
+    padding: 80px 20px;
+    background: #0d1117;
+}
+
+.chat-container {
+    max-width: 800px;
+    margin: 40px auto;
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+.chat-messages {
+    height: 300px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    background: #0d1117;
+}
+
+.chat-input-container {
+    display: flex;
+    gap: 10px;
+}
+
+.chat-input {
+    flex-grow: 1;
+    background: #21262d;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    padding: 15px;
+    color: #c9d1d9;
+    font-size: 1em;
+}
+
+.chat-input:focus {
+    outline: none;
+    border-color: #58a6ff;
+}

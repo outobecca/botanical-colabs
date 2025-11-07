@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notebook Previews - Botanical Colabs</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: #f6f8fa;
+        }
+        h1 {
+            color: #24292f;
+            border-bottom: 2px solid #d0d7de;
+            padding-bottom: 10px;
+        }
+        .category {
+            margin: 40px 0;
+        }
+        .category h2 {
+            color: #0969da;
+            text-transform: capitalize;
+        }
+        .preview-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .preview-card {
+            background: white;
+            border: 1px solid #d0d7de;
+            border-radius: 8px;
+            padding: 20px;
+            transition: all 0.2s;
+        }
+        .preview-card:hover {
+            border-color: #0969da;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transform: translateY(-2px);
+        }
+        .preview-card a {
+            color: #24292f;
+            text-decoration: none;
+            font-weight: 600;
+            display: block;
+        }
+        .preview-card a:hover {
+            color: #0969da;
+        }
+        .badge {
+            display: inline-block;
+            background: #ddf4ff;
+            color: #0969da;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>📓 Notebook Previews</h1>
+    <p>Static snapshots of executed notebooks with dummy data for demonstration purposes.</p>
+
+    <div class="category">
+        <h2>Agrology</h2>
+        <div class="preview-grid">
+
+            <div class="preview-card">
+                <a href="html/agrology_fertilizer_calculations.html">Agrology Fertilizer Calculations</a>
+                <span class="badge">Preview</span>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="category">
+        <h2>Regional</h2>
+        <div class="preview-grid">
+
+            <div class="preview-card">
+                <a href="html/regional_finnish_weather_analysis.html">Regional Finnish Weather Analysis</a>
+                <span class="badge">Preview</span>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

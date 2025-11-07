@@ -1,36 +1,36 @@
-# 📊 Data Analysis Template
+# 🌾 Data Analysis & Exploration
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/outobecca/botanical-colabs/blob/main/notebooks/templates/TEMPLATE_data_analysis.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/outobecca/botanical-colabs/blob/main/notebooks/agrology/data_analysis_exploration.ipynb)
 
-> **Specialized template for analyzing environmental sensors, soil tests, and plant measurements**
+> **Comprehensive toolkit for agricultural data exploration and analysis**
 
 ---
 
 ## 📋 Overview
 
-Specialized template for analyzing environmental sensors, soil tests, and plant measurements
+Comprehensive toolkit for agricultural data exploration and analysis
 
-This notebook is part of the **Templates** category and provides specialized tools for botanical research and analysis.
+This notebook is part of the **Agrology** category and provides specialized tools for botanical research and analysis.
 
 ---
 
 ## 🎯 Use Cases
 
-- ✅ **Greenhouse sensor data**
-- ✅ **Field measurements**
-- ✅ **Soil test analysis**
-- ✅ **Environmental monitoring**
-- ✅ **Quality control**
+- ✅ **Crop yield analysis**
+- ✅ **Soil data exploration**
+- ✅ **Environmental sensor analysis**
+- ✅ **Field trial results**
+- ✅ **Research data QC**
 
 ---
 
 ## ⭐ Key Features
 
-- ✅ Statistical analysis tools
-- ✅ Outlier detection
+- ✅ Automated outlier detection
+- ✅ Statistical summaries
 - ✅ Correlation analysis
-- ✅ Automated reporting
-- ✅ Data quality assessment
+- ✅ Time-series visualization
+- ✅ Data quality checks
 
 ---
 
@@ -138,7 +138,7 @@ MIT License — Free to use, modify, and distribute
 ```bibtex
 @software{botanical_notebook_2025,
   author = {Sihvonen, Pekka},
-  title = {📊 Data Analysis Template - Botanical Colabs},
+  title = {🌾 Data Analysis & Exploration - Botanical Colabs},
   year = {2025},
   publisher = {GitHub},
   url = {https://github.com/outobecca/botanical-colabs}
@@ -161,4 +161,4 @@ Found an issue or have a suggestion?
 **Version:** 2.0  
 **Status:** ✅ Production Ready
 
-[← Back to Templates](Home#templates-notebooks) | [View on GitHub](https://github.com/outobecca/botanical-colabs/blob/main/notebooks/templates/TEMPLATE_data_analysis.ipynb)
+[← Back to Agrology](Home#agrology-notebooks) | [View on GitHub](https://github.com/outobecca/botanical-colabs/blob/main/notebooks/agrology/data_analysis_exploration.ipynb)

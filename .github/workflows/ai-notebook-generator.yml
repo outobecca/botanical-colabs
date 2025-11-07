@@ -13,6 +13,58 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
-    - name: Get issue body
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.x'
+
+    - name: Install dependencies
       run: |
-        echo "Issue body: ${{ github.event.issue.body }}"
+        python -m pip install --upgrade pip
+        pip install google-generativeai jupyter
+
+    - name: Generate notebook
+      env:
+        GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        ISSUE_BODY: ${{ github.event.issue.body }}
+        ISSUE_TITLE: ${{ github.event.issue.title }}
+      run: |
+        python -c "
+import google.generativeai as genai
+import os
+
+# Configure the Gemini API key
+genai.configure(api_key=os.environ['GEMINI_API_KEY'])
+
+# Create the model
+model = genai.GenerativeModel('gemini-pro')
+
+# Get the issue body and title from environment variables
+issue_body = os.environ['ISSUE_BODY']
+issue_title = os.environ['ISSUE_TITLE']
+
+# Create the prompt for the model
+prompt = f'Create a Jupyter notebook that does the following: {issue_body}. The notebook should be well-structured with markdown cells for explanations and code cells for the implementation. The filename should be based on this title: {issue_title}'
+
+# Generate the notebook content
+response = model.generate_content(prompt)
+
+# Get the notebook content from the response
+notebook_content = response.text
+
+# Sanitize the filename
+filename = issue_title.lower().replace(' ', '_') + '.ipynb'
+
+# Write the notebook content to a file
+with open(f'notebooks/examples/{filename}', 'w') as f:
+    f.write(notebook_content)
+
+print(f'Successfully created notebook: {filename}')
+        "
+
+    - name: Commit and push changes
+      uses: stefanzweifel/git-auto-commit-action@v5
+      with:
+        commit_message: "AI: Add notebook generated from issue #${{ github.event.issue.number }}"
+        branch: main
+        file_pattern: notebooks/examples/*.ipynb

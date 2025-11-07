@@ -255,3 +255,34 @@ export TREFLE_API_KEY="your_key_here"
 ---
 
 Last updated: 2025-11-04
+
+---
+
+## 5. GitHub API Token & Gemini API Key for AI Chatbox
+
+**Cost:** Free
+
+**Purpose:** The AI Chatbox functionality relies on two secrets to be set in your repository settings:
+
+1.  **`GITHUB_TOKEN`:** This is a pre-configured secret in your repository that allows the GitHub Action to commit the generated notebook to the repository.
+2.  **`GEMINI_API_KEY`:** This is the API key for the Google Gemini API, which is used to generate the notebook content.
+
+**Setup:**
+
+1.  **`GITHUB_TOKEN`:** This secret is automatically created by GitHub and is available to all workflows. You do not need to do anything to set it up.
+
+2.  **`GEMINI_API_KEY`:**
+    1.  Go to https://aistudio.google.com/app/apikey
+    2.  Sign in with your Google account.
+    3.  Click "Create API Key".
+    4.  Copy the key (starts with `AIza...`).
+    5.  In your GitHub repository, go to `Settings` > `Secrets and variables` > `Actions`.
+    6.  Click `New repository secret`.
+    7.  Set the name to `GEMINI_API_KEY` and paste the key as the value.
+
+**How it works:**
+
+1.  When a user submits a prompt in the chatbox on the GitHub Pages site, a new GitHub Issue is created with the label `ai-request`.
+2.  This triggers the `ai-notebook-generator.yml` GitHub Action.
+3.  The action uses the `GEMINI_API_KEY` to generate the notebook content based on the issue body.
+4.  The action then uses the `GITHUB_TOKEN` to commit the new notebook to the `notebooks/examples/` directory.

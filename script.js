@@ -327,4 +327,71 @@ document.addEventListener('DOMContentLoaded', () => {
     setupSmoothScrolling();
     setupStickyNavbar();
     setupCardMouseTracking();
+
+    // AI Chatbox
+    const chatMessages = document.getElementById('chat-messages');
+    const chatInput = document.getElementById('chat-input');
+    const chatSubmit = document.getElementById('chat-submit');
+
+    // Replace with your GitHub personal access token (if you have one for a private repo)
+    // For public repos, you can often get away without one for read-only actions
+    // but for creating issues, you'll need one.
+    const GITHUB_TOKEN = 'YOUR_GITHUB_TOKEN'; // IMPORTANT: Replace with a real token
+
+    async function createNotebookIssue(prompt) {
+        const issue = {
+            title: 'AI Notebook Request',
+            body: prompt,
+            labels: ['ai-request']
+        };
+
+        try {
+            const response = await fetch(`${GITHUB_API_BASE}/repos/${GITHUB_REPO}/issues`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `token ${GITHUB_TOKEN}`
+                },
+                body: JSON.stringify(issue)
+            });
+
+            if (response.ok) {
+                const newIssue = await response.json();
+                return `Successfully created issue #${newIssue.number}. Our AI will start working on it shortly.`;
+            } else {
+                return 'Error: Could not create GitHub issue.';
+            }
+        } catch (error) {
+            console.error('Error creating issue:', error);
+            return 'Error: Could not connect to GitHub.';
+        }
+    }
+
+    if (chatSubmit) {
+        chatSubmit.addEventListener('click', async () => {
+            const prompt = chatInput.value.trim();
+            if (prompt) {
+                // Add user message to chat
+                const userMessage = document.createElement('div');
+                userMessage.textContent = `You: ${prompt}`;
+                chatMessages.appendChild(userMessage);
+
+                // Clear input
+                chatInput.value = '';
+
+                // Add thinking message
+                const thinkingMessage = document.createElement('div');
+                thinkingMessage.textContent = 'AI: Thinking...';
+                chatMessages.appendChild(thinkingMessage);
+
+                // Scroll to bottom
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+
+                // Create issue and display response
+                const responseText = await createNotebookIssue(prompt);
+                thinkingMessage.textContent = `AI: ${responseText}`;
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }
+        });
+    }
 });

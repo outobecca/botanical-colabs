@@ -165,6 +165,13 @@ Advanced multi-source plant information aggregator that creates comprehensive, p
 ### No Setup Required
 All notebooks run directly in Google Colab - no local installation, no environment configuration, no Python setup needed. Just click and start analyzing.
 
+### 📱 Mobile-Friendly
+Notebooks are optimized for mobile devices through:
+- **Mercury Web Apps**: Convert notebooks to mobile-optimized web applications
+- **Responsive Design**: Touch-friendly interfaces that work on phones and tablets
+- **Progressive Web Apps**: Installable apps with offline capabilities
+- **Simplified Mobile Versions**: Streamlined interfaces for small screens
+
 ### Open Data Integration
 Seamlessly connects to major botanical and environmental databases:
 - **GBIF** (Global Biodiversity Information Facility) - 2+ billion species occurrences
@@ -197,11 +204,40 @@ Designed for both learning and production use:
 
 ## Run the notebooks
 
-Recommended: open notebooks in Google Colab (no local install needed):
+### 🌐 Web/Desktop (Recommended)
+Open notebooks in Google Colab (no local install needed):
 
 1. Open the notebook file in the `notebooks/` folder.
 2. Click "Open in Colab" or upload the notebook to Colab.
 3. If a cell installs packages (e.g., `pip install requests pandas google-generativeai`), run it.
+
+### 📱 Mobile Devices
+For the best mobile experience, use our Mercury web apps:
+
+#### Quick Mobile Deployment
+```bash
+# Setup mobile environment
+python deploy_mobile.py --setup
+
+# Run a notebook as mobile web app
+python deploy_mobile.py --serve notebooks/examples/mobile_plant_card.ipynb
+
+# Deploy all notebooks to Mercury Cloud
+python deploy_mobile.py --all --deploy
+```
+
+#### Manual Setup
+1. Install Mercury: `pip install mercury`
+2. Run: `mercury run notebooks/examples/mobile_plant_card.ipynb`
+3. Open in your mobile browser at `http://localhost:8000`
+4. Or deploy to cloud for shareable mobile links
+
+**Mobile Examples:**
+- 🌱 [Mobile Plant Card Generator](notebooks/examples/mobile_plant_card.ipynb) - Touch-optimized plant care cards
+- 📊 [Mobile Fertilizer Calculator](notebooks/agrology/fertilizer_calculations.ipynb) - Simplified mobile interface
+- 🌡️ [Mobile Weather Analysis](notebooks/regional/finnish_weather_analysis.ipynb) - Location-based mobile analysis
+
+📖 See [Mobile Deployment Guide](MOBILE_DEPLOYMENT.md) for detailed instructions.
 
 Local (optional): to run locally you'll need Python 3.8+ and some packages. Create a virtual env and install dependencies:
 

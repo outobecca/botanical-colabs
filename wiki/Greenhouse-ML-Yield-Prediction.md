@@ -1,36 +1,36 @@
-# 📊 Data Analysis Template
+# 🤖 ML Yield Prediction
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/outobecca/botanical-colabs/blob/main/notebooks/templates/TEMPLATE_data_analysis.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/outobecca/botanical-colabs/blob/main/notebooks/greenhouse/ml_yield_prediction.ipynb)
 
-> **Specialized template for analyzing environmental sensors, soil tests, and plant measurements**
+> **Machine learning models for crop yield prediction and optimization**
 
 ---
 
 ## 📋 Overview
 
-Specialized template for analyzing environmental sensors, soil tests, and plant measurements
+Machine learning models for crop yield prediction and optimization
 
-This notebook is part of the **Templates** category and provides specialized tools for botanical research and analysis.
+This notebook is part of the **Greenhouse** category and provides specialized tools for botanical research and analysis.
 
 ---
 
 ## 🎯 Use Cases
 
-- ✅ **Greenhouse sensor data**
-- ✅ **Field measurements**
-- ✅ **Soil test analysis**
-- ✅ **Environmental monitoring**
-- ✅ **Quality control**
+- ✅ **Yield forecasting**
+- ✅ **Disease risk assessment**
+- ✅ **Optimal condition recommendations**
+- ✅ **Resource planning**
+- ✅ **Harvest scheduling**
 
 ---
 
 ## ⭐ Key Features
 
-- ✅ Statistical analysis tools
-- ✅ Outlier detection
-- ✅ Correlation analysis
-- ✅ Automated reporting
-- ✅ Data quality assessment
+- ✅ Random Forest models
+- ✅ Gradient Boosting
+- ✅ Feature importance analysis
+- ✅ Cross-validation
+- ✅ Prediction confidence intervals
 
 ---
 
@@ -138,7 +138,7 @@ MIT License — Free to use, modify, and distribute
 ```bibtex
 @software{botanical_notebook_2025,
   author = {Sihvonen, Pekka},
-  title = {📊 Data Analysis Template - Botanical Colabs},
+  title = {🤖 ML Yield Prediction - Botanical Colabs},
   year = {2025},
   publisher = {GitHub},
   url = {https://github.com/outobecca/botanical-colabs}
@@ -161,4 +161,4 @@ Found an issue or have a suggestion?
 **Version:** 2.0  
 **Status:** ✅ Production Ready
 
-[← Back to Templates](Home#templates-notebooks) | [View on GitHub](https://github.com/outobecca/botanical-colabs/blob/main/notebooks/templates/TEMPLATE_data_analysis.ipynb)
+[← Back to Greenhouse](Home#greenhouse-notebooks) | [View on GitHub](https://github.com/outobecca/botanical-colabs/blob/main/notebooks/greenhouse/ml_yield_prediction.ipynb)
