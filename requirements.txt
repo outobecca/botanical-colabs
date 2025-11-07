@@ -12,20 +12,20 @@
 # ============================================================================
 
 # Core dependencies
-requests>=2.31.0          # HTTP library for API calls
-pandas>=2.0.0            # Data manipulation and analysis
+requests>=2.32.0          # HTTP library for API calls
+pandas>=2.2.0            # Data manipulation and analysis
 ipywidgets>=8.0.0        # Interactive widgets for Jupyter/Colab
-google-generativeai>=0.3.0  # Google Gemini AI API
+google-generativeai>=0.5.0  # Google Gemini AI API
 
 # Data analysis and visualization (used in horticultural notebooks)
 numpy>=1.24.0            # Numerical computing
-matplotlib>=3.7.0        # Static plotting
+matplotlib>=3.9.0        # Static plotting
 seaborn>=0.12.0          # Statistical data visualization
 plotly>=5.14.0           # Interactive visualizations
-scipy>=1.10.0            # Scientific computing and statistics
+scipy>=1.13.0            # Scientific computing and statistics
 
 # Machine learning (used in ML notebooks)
-scikit-learn>=1.3.0      # Machine learning library
+scikit-learn>=1.5.0      # Machine learning library
 
 # Data handling
 openpyxl>=3.1.0          # Excel file support
@@ -48,7 +48,13 @@ jupyter-book>=0.15.0     # Build beautiful books from notebooks
 # Image handling (if needed for advanced features)
 # Pillow>=10.0.0          # Python Imaging Library
 
-# Mercury framework for web apps
+# Mercury framework for web apps and mobile deployment
 mercury>=2.3.3
 nbconvert>=7.16.4
 jupyter>=1.0.0
+
+# Additional mobile/web app dependencies
+streamlit>=1.28.0        # Alternative web app framework
+voila>=0.5.0             # Jupyter dashboard renderer
+panel>=1.3.0             # Dashboard framework
+plotly>=5.14.0          # Mobile-friendly interactive plots
