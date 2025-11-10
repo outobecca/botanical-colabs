@@ -63,27 +63,27 @@ Notebooks are organized into six specialized categories, each designed for speci
 
 Professionally designed starting points for creating new botanical research notebooks. Each template includes pre-configured sections, best practices for documentation, error handling, and data source citations. **Now enhanced with MyST markdown, auto-reload, and Marp presentation features!**
 
-### ⭐ `TEMPLATE_myst_scientific.ipynb` — MyST Scientific Template NEW!
+### ⭐ `TEMPLATE_myst_scientific.ipynb` — MyST Scientific Template NEW! ![Experimental](https://img.shields.io/badge/status-experimental-orange)
 Advanced scientific notebook template with MyST markdown features for publication-quality documentation. Includes cross-references, citations, admonitions, auto-reload setup, %%writefile for code modularization, and Jupyter Book compatibility. Perfect for research papers, scientific reports, and technical documentation.
 [📖 Details](notebooks/templates/README.md) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/outobecca/botanical-colabs/blob/main/notebooks/templates/TEMPLATE_myst_scientific.ipynb)
 
-### ⭐ `TEMPLATE_marp_presentation.ipynb` — Marp Presentation Template NEW!
+### ⭐ `TEMPLATE_marp_presentation.ipynb` — Marp Presentation Template NEW! ![Experimental](https://img.shields.io/badge/status-experimental-orange)
 Convert your botanical research into beautiful presentations! Includes Marp markdown for slides, live demo code cells, professional visualizations, and export options (HTML, PDF, PowerPoint). Ideal for conferences, teaching, and stakeholder presentations.
 [📖 Details](notebooks/templates/README.md) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/outobecca/botanical-colabs/blob/main/notebooks/templates/TEMPLATE_marp_presentation.ipynb)
 
-### `TEMPLATE_botanical_notebook.ipynb` — General Template
+### `TEMPLATE_botanical_notebook.ipynb` — General Template ![Experimental](https://img.shields.io/badge/status-experimental-orange)
 Comprehensive general-purpose template for botanical science notebooks. Includes sections for literature review, data collection, analysis, visualization, and conclusions. Features built-in support for GBIF, Trefle, and other major botanical databases.
 [📖 Details](notebooks/templates/README.md) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/outobecca/botanical-colabs/blob/main/notebooks/templates/TEMPLATE_botanical_notebook.ipynb)
 
-### `TEMPLATE_data_analysis.ipynb` — Data Analysis Template  
+### `TEMPLATE_data_analysis.ipynb` — Data Analysis Template ![Experimental](https://img.shields.io/badge/status-experimental-orange)  
 Specialized template pre-configured for analyzing environmental sensors, soil tests, and plant measurements. Includes statistical tests, outlier detection, correlation analysis, and automated report generation. Ideal for greenhouse operators and field researchers.
 [📖 Details](notebooks/templates/README.md) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/outobecca/botanical-colabs/blob/main/notebooks/templates/TEMPLATE_data_analysis.ipynb)
 
-### `TEMPLATE_machine_learning.ipynb` — ML Template
+### `TEMPLATE_machine_learning.ipynb` — ML Template ![Experimental](https://img.shields.io/badge/status-experimental-orange)
 Production-ready machine learning template specialized for agricultural applications like crop yield prediction and disease risk models. Includes feature engineering, model selection, hyperparameter tuning, and model evaluation with agricultural metrics.
 [📖 Details](notebooks/templates/README.md) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/outobecca/botanical-colabs/blob/main/notebooks/templates/TEMPLATE_machine_learning.ipynb)
 
-### `TEMPLATE_environmental_monitoring.ipynb` — Environmental Template
+### `TEMPLATE_environmental_monitoring.ipynb` — Environmental Template ![Experimental](https://img.shields.io/badge/status-experimental-orange)
 Focused template for monitoring and analyzing soil health, water usage, climate data, and sustainability metrics. Perfect for environmental assessments, resource optimization, and sustainability reporting.
 [📖 Details](notebooks/templates/README.md) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/outobecca/botanical-colabs/blob/main/notebooks/templates/TEMPLATE_environmental_monitoring.ipynb)
 
@@ -93,15 +93,15 @@ Focused template for monitoring and analyzing soil health, water usage, climate 
 
 Advanced field crop and soil science analysis notebooks designed for researchers and farmers working with agricultural data. These notebooks provide powerful statistical tools and data exploration capabilities for making data-driven decisions in crop management.
 
-### `data_analysis_exploration.ipynb` — Data Analysis & Exploration
+### `data_analysis_exploration.ipynb` — Data Analysis & Exploration ![Experimental](https://img.shields.io/badge/status-experimental-orange)
 Comprehensive interactive analysis toolkit for environmental sensors, soil tests, and plant measurements. Features automated outlier detection, statistical summaries, correlation analysis, and data quality assessment. Includes visualization tools for time-series data, spatial patterns, and multi-variate relationships. Perfect for initial data exploration and quality control.
 [📖 Details](notebooks/agrology/README.md) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/outobecca/botanical-colabs/blob/main/notebooks/agrology/data_analysis_exploration.ipynb)
 
-### `environmental_management.ipynb` — Environmental & Resource Management
+### `environmental_management.ipynb` — Environmental & Resource Management ![Experimental](https://img.shields.io/badge/status-experimental-orange)
 In-depth analysis of soil health indicators, water usage patterns, climate resilience metrics, and resource consumption for sustainable agriculture. Includes carbon footprint calculations, water efficiency metrics, and sustainability reporting tools. Ideal for precision agriculture and environmental impact assessments.
 [📖 Details](notebooks/agrology/README.md) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/outobecca/botanical-colabs/blob/main/notebooks/agrology/environmental_management.ipynb)
 
-### `fertilizer_calculations.ipynb` — Fertilizer Calculations
+### `fertilizer_calculations.ipynb` — Fertilizer Calculations ![Experimental](https://img.shields.io/badge/status-experimental-orange)
 Calculate precise fertilizer requirements based on crop-specific nutrient needs, soil test results, and field characteristics. Supports multiple crops (vegetables, grains, legumes, root crops) with NPK optimization for nitrogen, phosphorus, and potassium. Features nutrient budget calculations, fertilizer product recommendations, application rate determination, and cost estimates. Accounts for existing soil nutrients and fertilizer efficiency to minimize waste and environmental impact. Ideal for precision agriculture, nutrient management planning, and sustainable farming practices.
 [📖 Details](notebooks/agrology/README.md) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/outobecca/botanical-colabs/blob/main/notebooks/agrology/fertilizer_calculations.ipynb)
 
@@ -111,15 +111,15 @@ Calculate precise fertilizer requirements based on crop-specific nutrient needs,
 
 Specialized notebooks for protected cultivation and greenhouse management, featuring advanced machine learning models and interactive visualizations for optimizing growing conditions and predicting outcomes.
 
-### `ml_yield_prediction.ipynb` — Crop Yield Prediction & ML
+### `ml_yield_prediction.ipynb` — Crop Yield Prediction & ML ![Experimental](https://img.shields.io/badge/status-experimental-orange)
 State-of-the-art machine learning models for predicting crop yield, disease risk assessment, and optimal growing condition recommendations. Implements Random Forest, Gradient Boosting, and neural network models with comprehensive feature importance analysis. Includes model validation, cross-validation strategies, and prediction confidence intervals. Essential for data-driven greenhouse management and yield optimization.
 [📖 Details](notebooks/greenhouse/README.md) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/outobecca/botanical-colabs/blob/main/notebooks/greenhouse/ml_yield_prediction.ipynb)
 
-### `data_visualization.ipynb` — Data Visualization
+### `data_visualization.ipynb` — Data Visualization ![Experimental](https://img.shields.io/badge/status-experimental-orange)
 Professional-quality interactive visualizations for plant growth monitoring, environmental conditions tracking, and greenhouse performance metrics. Utilizes Matplotlib for publication-ready static plots, Seaborn for statistical graphics, and Plotly for interactive dashboards. Create time-series plots, heatmaps, 3D visualizations, and custom dashboards for presenting research findings or operational reports.
 [📖 Details](notebooks/greenhouse/README.md) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/outobecca/botanical-colabs/blob/main/notebooks/greenhouse/data_visualization.ipynb)
 
-### `lighting_setup_analyzer.ipynb` — Lighting Setup Analyzer
+### `lighting_setup_analyzer.ipynb` — Lighting Setup Analyzer ![Experimental](https://img.shields.io/badge/status-experimental-orange)
 Comprehensive analysis of greenhouse lighting setups using CSV measurement data. Evaluates PPFD (Photosynthetic Photon Flux Density), light intensity distribution across zones, uniformity ratios to identify hot/cold spots, Daily Light Integral (DLI) for photoperiod control, and energy efficiency metrics. Provides actionable recommendations for optimizing plant growth conditions while minimizing energy costs. Essential for greenhouse operators managing supplemental lighting, ensuring uniform crop development, and meeting the 200-400 μmol/m²/s PPFD requirements for optimal photosynthesis.
 [📖 Details](notebooks/greenhouse/README.md) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/outobecca/botanical-colabs/blob/main/notebooks/greenhouse/lighting_setup_analyzer.ipynb)
 
@@ -129,7 +129,7 @@ Comprehensive analysis of greenhouse lighting setups using CSV measurement data.
 
 Region-specific horticultural analysis leveraging local open data sources and meteorological services. These notebooks demonstrate how to integrate national databases and services for localized botanical research.
 
-### `finnish_weather_analysis.ipynb` 🇫🇮 — Finnish Weather Analysis
+### `finnish_weather_analysis.ipynb` 🇫🇮 — Finnish Weather Analysis ![In Production](https://img.shields.io/badge/status-in%20production-green)
 Comprehensive analysis of Finnish weather data for horticultural applications using FMI (Ilmatieteen laitos) open data API. Calculate growing season metrics, frost risk assessments, and Growing Degree Days (GDD) for different crop types. Includes historical climate analysis, seasonal patterns, and future climate projections. Features bilingual documentation (Finnish/English) for accessibility. Ideal for Finnish farmers, researchers, and gardeners planning crop selection and timing. **Note:** Can be adapted for other national weather services.
 [📖 Details](notebooks/regional/README.md) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/outobecca/botanical-colabs/blob/main/notebooks/regional/finnish_weather_analysis.ipynb)
 
@@ -139,7 +139,7 @@ Comprehensive analysis of Finnish weather data for horticultural applications us
 
 Interactive learning materials designed for complete beginners in botanical data science. These notebooks require no prior programming experience and provide step-by-step guidance with real botanical examples.
 
-### `education_tutorial.ipynb` — Data Science Tutorial
+### `education_tutorial.ipynb` — Data Science Tutorial ![Experimental](https://img.shields.io/badge/status-experimental-orange)
 Comprehensive interactive learning environment for beginners in botanical data science. Covers Python programming basics, Pandas for data manipulation, data visualization techniques, statistical analysis fundamentals, and introductory machine learning—all with horticultural and botanical examples. Features hands-on exercises, quizzes, and real-world case studies. Perfect for students, educators, and professionals transitioning into data-driven plant science. **No prior programming required!** Start your journey into botanical data science here.
 [📖 Details](notebooks/education/README.md) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/outobecca/botanical-colabs/blob/main/notebooks/education/education_tutorial.ipynb)
 
@@ -149,7 +149,7 @@ Comprehensive interactive learning environment for beginners in botanical data s
 
 Real-world implementations and demonstrations showcasing best practices for botanical data integration and multi-source data aggregation.
 
-### `generator-plant-card.ipynb` — Plant Card Generator
+### `generator-plant-card.ipynb` — Plant Card Generator ![In Production](https://img.shields.io/badge/status-in%20production-green) ![Needs API Keys](https://img.shields.io/badge/status-needs%20api%20keys-red)
 Advanced multi-source plant information aggregator that creates comprehensive, professionally formatted plant care cards. Fetches and combines data from GBIF (species occurrence), Trefle (plant characteristics), Wikipedia (encyclopedic information), iNaturalist (observations), and more. Features AI-powered content summarization using Google's Gemini API, automated image selection with quality scoring, and intelligent data validation. Supports 9 languages for global accessibility (English, Finnish, Swedish, Spanish, French, German, Italian, Portuguese, Dutch). Perfect for creating educational materials, nursery labels, botanical garden signage, or personal plant reference cards. **Demonstrates advanced API integration patterns and data fusion techniques.**
 [📖 Details](notebooks/examples/README.md) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/outobecca/botanical-colabs/blob/main/notebooks/examples/generator-plant-card.ipynb)
 
