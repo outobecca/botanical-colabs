@@ -1,3 +1,5 @@
+While the Colab is usable, the notebook rendering is not satisfactory. Researching for alternative solutions for more ease of use.
+
 # Botanical Sciences Colab Notebooks
 
 A collection of reproducible Jupyter/Colab notebooks for practical botanical, horticultural, and agricultural research — combining open data sources, simple data pipelines, and AI-assisted workflows.
